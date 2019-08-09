@@ -38,3 +38,4 @@ D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Raz
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\Home\List.g.cshtml.cs
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\bin\Debug\netcoreapp2.2\Model.pdb
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\bin\Debug\netcoreapp2.2\Model.dll.config
+D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\ProductActivity\Index.g.cshtml.cs
