@@ -1,0 +1,155 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="cart">
+	<p v-if="isLoading">Loading</p>
+	<div class="shoppingcart box">
+		<h2>Shopping Cart ({{getCartItems()}})</h2>
+		<br />
+		<div class="container" v-for="(item, index) in cart">
+			<div class="item" v-if="!item.isDeleted && !item.isMovedToSaved">
+				<div class="image">
+					<a v-bind:href="item.url">
+						<img v-bind:src="item.image" alt="" />
+					</a>
+				</div>
+				<div class="info">
+					<h4>	{{item.name}}</h4>
+					<p class="seller">by {{item.seller}}</p>
+					<p class="status available" v-if="item.isAvailable">In Stock</p>
+					<p class="shipping" v-if="item.isEligible">Eligible for Free Shipping & Free Returns</p>
+					<a href="#" v-on:click="removeFromCart(index)">Delete</a>
+					<a href="#" v-on:click="saveForLater(index)" class="secondary">Save for later</a>
+				</div>
+				<p class="price">${{item.price}}</p>
+			</div>
+		</div>
+		<div class="subtotal">
+			<h3>Subtotal: <span class="price">{{cartTotal}}</span></h3>
+		</div>
+	</div>
+	<div class="savedforlater box">
+		<h2>Saved For Later ({{saved.length}})</h2>
+		<br />
+		<div v-for="item in saved">
+			<div class="item" v-if="!item.isDeleted && item.isMovedToSaved">
+				<div class="image">
+					<a v-bind:href="item.url">
+						<img width="250" v-bind:src="item.image" alt="" />
+					</a>
+				</div>
+				<div class="info">
+					<h4>	{{item.name}}</h4>
+					<p class="seller">by {{item.seller}}</p>
+					<p class="status available" v-if="item.isAvailable">In Stock</p>
+					<p class="shipping" v-if="item.isEligible">Eligible for Free Shipping & Free Returns</p>
+					<a href="#">Delete</a>
+					<a href="#" class="secondary">Move to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		var jsonData = {
+			"cart": [
+				{
+					"name": "SanDisk SDSSDA-120G-G27 SSD Plus, 120 GB",
+					"url": "https://www.amazon.com.tr/SanDisk-SDSSDA-120G-G27-SSD-Plus-120GB/dp/B07621PNWC/ref=zg_bs_computers_5?_encoding=UTF8&psc=1&refRID=33CW9WPG0X69T29SBGE8",
+					"image": "https://images-na.ssl-images-amazon.com/images/I/61dg3kI5C8L._SL1500_.jpg",
+					"seller": "SanDisk",
+					"isAvailable": true,
+					"isEligible": true,
+					"isShippingFree": true,
+					"isDeleted": false,
+					"isMovedToSaved": false,
+					"price": "161.89"
+				},
+				{
+					"name": "Logitech M220 Kablosuz Silent Mouse, Kırmızı 910-004880",
+					"url": "https://www.amazon.com.tr/Logitech-M220-Kablosuz-K%C4%B1rm%C4%B1z%C4%B1-910-004880/dp/B01K7GEFWK/ref=zg_bs_computers_7?_encoding=UTF8&psc=1&refRID=33CW9WPG0X69T29SBGE8",
+					"image": "https://images-na.ssl-images-amazon.com/images/I/51QJoLA0xQL._SL1104_.jpg",
+					"seller": "Logitech",
+					"isAvailable": true,
+					"isEligible": true,
+					"isShippingFree": false,
+					"isDeleted": false,
+					"isMovedToSaved": false,
+					"price": "22.50"
+				},
+				{
+					"name": "S-link MHL-73, Mhl Görüntü Aktarıcı, Micro USB S3 to HDMI Çevirici",
+					"url": "https://www.amazon.com.tr/SanDisk-SDSSDA-120G-G27-SSD-Plus-120GB/dp/B07621PNWC/ref=zg_bs_computers_5?_encoding=UTF8&psc=1&refRID=33CW9WPG0X69T29SBGE8",
+					"image": "https://images-na.ssl-images-amazon.com/images/I/61l6hjU1UFL._SL1500_.jpg",
+					"seller": "S-link",
+					"isAvailable": true,
+					"isEligible": true,
+					"isShippingFree": true,
+					"isDeleted": false,
+					"isMovedToSaved": false,
+					"price": "37.99"
+				}
+			],
+			"saved": [
+				{
+					"name": "Xbox One Kablosuz Oyun Kumandası, Siyah",
+					"url": "https://www.amazon.com.tr/Xbox-Kablosuz-Oyun-Kumandas%C4%B1-Siyah/dp/B01L7PQBL8?pf_rd_p=73f7c3d4-e380-5e40-8d76-48f1db3129c0&pf_rd_r=M47ETE7HECJN972S4V83&pd_rd_wg=QC3cl&ref_=pd_gw_ri&pd_rd_w=QsGz9&pd_rd_r=a9ce6be1-f318-47f6-8492-59b528778ce1",
+					"image": "https://images-na.ssl-images-amazon.com/images/I/71iYhxx303L._SL1500_.jpg",
+					"seller": "Microsoft",
+					"isAvailable": true,
+					"isEligible": false,
+					"isShippingFree": false,
+					"isDeleted": false,
+					"isMovedToSaved": true,
+					"price": "44.27"
+				}
+			]
+		};
+
+		var vm = new Vue({
+			el: '#cart',
+			name: "shoppingcart",
+			data: {
+				"isLoading": true,
+				cart: [],
+				saved: []
+			},
+			methods: {
+				removeFromCart(index) {
+					this.cart[index].isDeleted = true;
+				},
+				saveForLater(index) {
+					this.cart[index].isMovedToSaved = true;
+					this.saved.push(this.cart[index]);
+				},
+				getCartItems() {
+					var items = this.cart.filter(function (x) { return !x.isDeleted && !x.isMovedToSaved });
+					return items.length;
+				}
+			},
+			computed: {
+				cartTotal() {
+					let total = 0;
+
+					this.cart.forEach(item => {
+						if (!item.isDeleted && !item.isMovedToSaved) {
+							total += parseFloat(item.price, 2);
+						}
+					});
+
+					return total;
+				}
+			},
+			created() {
+				this.isLoading = false;
+				this.cart = jsonData.cart;
+				this.saved = jsonData.saved;
+			}
+		});
+	</script>
+}

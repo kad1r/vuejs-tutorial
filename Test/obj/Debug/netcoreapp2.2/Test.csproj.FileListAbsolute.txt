@@ -1,0 +1,9 @@
+D:\Development\Tutorials\VueJsTutorial\Test\bin\Debug\netcoreapp2.2\Test.deps.json
+D:\Development\Tutorials\VueJsTutorial\Test\bin\Debug\netcoreapp2.2\Test.dll
+D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.csprojAssemblyReference.cache
+D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.csproj.CoreCompileInputs.cache
+D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfoInputs.cache
+D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfo.cs
+D:\Development\Tutorials\VueJsTutorial\Test\bin\Debug\netcoreapp2.2\Test.pdb
+D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.dll
+D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.pdb

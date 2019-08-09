@@ -1,0 +1,40 @@
+﻿@model VueJsTutorial.Models.UserVM
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div>
+	{{user.email}}-{{user.age}}
+</div>
+<br />
+<br />
+<h1>List</h1>
+<div id="list-records"></div>
+
+@section scripts {
+	<script>
+		var app = new Vue({
+			el: '#vue-app',
+			data: @Json.Serialize(Model)
+		});
+
+		var list = new Vue({
+			el: '#list-records',
+			data: {
+				result: []
+			},
+			mounted() {
+				$get(this, "@Url.Action("getdata", "home")");
+			},
+			template: `@await Html.PartialAsync("List", Model)`,
+			methods: {
+				addNewUser: function () {
+					this.result.list.push({
+						email: 'new email address', dob: 'date of birth', age: 24
+					});
+				}
+			}
+		});
+	</script>
+}

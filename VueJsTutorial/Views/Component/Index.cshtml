@@ -1,0 +1,126 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="vue-app">
+	<vue-cart v-bind:data="result.cart" title="Shopping Cart" type="cart" v-on:itemmoveto="handleItemMovedTo"></vue-cart>
+	<vue-cart v-bind:data="result.saved" title="Saved For Later" type="saved" v-on:itemmoveto="handleItemMovedTo"></vue-cart>
+</div>
+
+@section scripts{
+	<script>
+
+		Vue.component("VueCart", {
+			props: {
+				data: { required: true },
+				title: { type: String, required: true },
+				type: { type: String, required: true }
+			},
+			template: `
+				<div class="shoppingcart box">
+					<h2>{{title}} ({{getCartItems()}})</h2>
+					<p v-if="getLength == 0">No item.</p>
+					<br/>
+					<div class="container" v-for="(item, index) in data">
+						<div class="item" v-if="!item.isDeleted">
+							<div class="image">
+								<a v-bind:href="item.url">
+									<img v-bind:src="item.image" v-bind:alt="item.name"/>
+								</a>
+							</div>
+							<div class="info">
+								<h4>	{{item.name}}</h4>
+								<p class="seller">by {{item.seller}}</p>
+								<p class="status available" v-if="item.isAvailable">In Stock</p>
+								<p class="shipping" v-if="item.isEligible">Eligible for Free Shipping & Free Returns</p>
+								<a href="#" v-on:click="removeFrom(index)">Delete</a>
+								<a href="#" v-on:click="moveTo(index)" class="secondary" v-if="isShoppingCart">Save for later</a>
+								<a href="#" v-on:click="moveTo(index)" class="secondary" v-if="isSavedCart">Move to cart</a>
+							</div>
+							<p class="price">\${{item.price}}</p>
+						</div>
+					</div>
+					<div class="subtotal" v-if="getLength > 0">
+						<h3>Subtotal: <span class="price">\${{cartTotal}}</span></h3>
+					</div>
+				</div>
+			`,
+			computed: {
+				cartTotal() {
+					let total = 0;
+
+					if (typeof this.data !== "undefined") {
+						this.data.forEach(item => {
+							if (!item.isDeleted) {
+								total += parseFloat(item.price, 2);
+							}
+						});
+					}
+
+					return total;
+				},
+				isShoppingCart() {
+					return this.type == 'cart';
+				},
+				isSavedCart() {
+					return this.type == 'saved';
+				},
+				getLength() {
+					let length = 0;
+
+					if (typeof this.data !== "undefined") {
+						this.data.forEach(item => {
+							if (!item.isDeleted) {
+								length += 1;
+							}
+						});
+					}
+
+					return length;
+				}
+			},
+			methods: {
+				removeFrom(index) {
+					this.data[index].isDeleted = true;
+					return this.data[index];
+				},
+				moveTo(index) {
+					this.$emit('itemmoveto', index, this.type);
+				},
+				getCartItems() {
+					if (typeof this.data !== "undefined") {
+						var items = this.data.filter(function (x) { return !x.isDeleted });
+						return items.length;
+					}
+				}
+			}
+		});
+
+		var vue = new Vue({
+			el: "#vue-app",
+			data: {
+				result: []
+			},
+			created() {
+				$get(this, "/data/shoppingcart.json");
+			},
+			methods: {
+				handleItemMovedTo(index, type) {
+					if (type == "cart") {
+						this.result.cart[index].isMovedToSaved = true;
+						this.result.saved.push(this.result.cart[index]);
+						this.result.cart.splice(index, 1);
+					}
+					
+					if (type == "saved") {
+						this.result.saved[index].isMovedToSaved = false;
+						this.result.cart.push(this.result.saved[index]);
+						this.result.saved.splice(index, 1);
+					}
+				}
+			}
+		});
+	</script>
+}

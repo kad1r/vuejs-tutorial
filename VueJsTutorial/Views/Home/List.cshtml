@@ -1,0 +1,23 @@
+﻿@model VueJsTutorial.Models.UserVM
+
+<div>
+	<button v-on:click="addNewUser">Add New User</button>
+	<div class="list">
+		<table>
+			<thead>
+				<tr>
+					<td>Email</td>
+					<td>Dob</td>
+					<td>Age</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="user in result.list">
+					<td>{{user.email}}</td>
+					<td>{{user.dob}}</td>
+					<td>{{user.age}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
