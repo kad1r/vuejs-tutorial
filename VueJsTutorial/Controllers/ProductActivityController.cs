@@ -29,10 +29,10 @@ namespace VueJsTutorial.Controllers
 			return View();
 		}
 
-		public async void FormInit(ProductActivityVM model)
+		public void FormInit(ProductActivityVM model)
 		{
-			model.ActivityTypes = _uow.Repository<ActivityType>().Query(x => x.IsActive).ToList();
-			model.WareHouses = _uow.Repository<WareHouse>().Query(x => x.IsActive).ToList();
+			model.ActivityTypes = _uow.Repository<ActivityType>().QueryNoTracking(x => x.IsActive).ToList();
+			model.WareHouses = _uow.Repository<WareHouse>().QueryNoTracking(x => x.IsActive).ToList();
 		}
 
 		public async Task<IActionResult> Form()

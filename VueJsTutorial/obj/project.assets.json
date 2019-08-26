@@ -4756,6 +4756,19 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -13089,6 +13102,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Data/1.0.0": {
       "type": "project",
       "path": "../Data/Data.csproj",
@@ -13102,6 +13120,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Common >= 1.0.0",
       "Data >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -13144,6 +13163,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
+              "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj"
+            },
             "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj": {
               "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj"
             },

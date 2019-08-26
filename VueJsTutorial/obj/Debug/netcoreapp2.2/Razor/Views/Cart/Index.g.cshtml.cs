@@ -23,10 +23,52 @@ using VueJsTutorial.Models;
 
 #line default
 #line hidden
+#line 3 "D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\Views\_ViewImports.cshtml"
+using Model.Models;
+
+#line default
+#line hidden
+#line 4 "D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\Views\_ViewImports.cshtml"
+using Model.ViewModels;
+
+#line default
+#line hidden
+#line 5 "D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\Views\_ViewImports.cshtml"
+using Data;
+
+#line default
+#line hidden
+#line 6 "D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\Views\_ViewImports.cshtml"
+using Common;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a1dbf3c1650e9ccae08f88014d07276ba08c8ab", @"/Views/Cart/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"021bcec753b05557b20511b6ea4d3ec1b35f3f01", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f59df44fbd8b141d4999b8b6eb81299e0e1445f", @"/Views/_ViewImports.cshtml")]
     public class Views_Cart_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("v-bind:src", new global::Microsoft.AspNetCore.Html.HtmlString("item.image"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("alt", "", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("width", new global::Microsoft.AspNetCore.Html.HtmlString("250"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        #line hidden
+        #pragma warning disable 0169
+        private string __tagHelperStringValueBuffer;
+        #pragma warning restore 0169
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner __tagHelperRunner = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner();
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __backed__tagHelperScopeManager = null;
+        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __tagHelperScopeManager
+        {
+            get
+            {
+                if (__backed__tagHelperScopeManager == null)
+                {
+                    __backed__tagHelperScopeManager = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
+                }
+                return __backed__tagHelperScopeManager;
+            }
+        }
+        private global::Common.Extensions.ImgHelper __Common_Extensions_ImgHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
@@ -40,7 +82,7 @@ using VueJsTutorial.Models;
 
 #line default
 #line hidden
-            BeginContext(84, 1731, true);
+            BeginContext(84, 334, true);
             WriteLiteral(@"
 <div id=""cart"">
 	<p v-if=""isLoading"">Loading</p>
@@ -51,7 +93,27 @@ using VueJsTutorial.Models;
 			<div class=""item"" v-if=""!item.isDeleted && !item.isMovedToSaved"">
 				<div class=""image"">
 					<a v-bind:href=""item.url"">
-						<img v-bind:src=""item.image"" alt="""" />
+						");
+            EndContext();
+            BeginContext(418, 38, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2a1dbf3c1650e9ccae08f88014d07276ba08c8ab5316", async() => {
+            }
+            );
+            __Common_Extensions_ImgHelper = CreateTagHelper<global::Common.Extensions.ImgHelper>();
+            __tagHelperExecutionContext.Add(__Common_Extensions_ImgHelper);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_0);
+            __Common_Extensions_ImgHelper.Alt = (string)__tagHelperAttribute_1.Value;
+            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            EndContext();
+            BeginContext(456, 883, true);
+            WriteLiteral(@"
 					</a>
 				</div>
 				<div class=""info"">
@@ -69,15 +131,35 @@ using VueJsTutorial.Models;
 			<h3>Subtotal: <span class=""price"">{{cartTotal}}</span></h3>
 		</div>
 	</div>
-	<div class=""savedforlat");
-            WriteLiteral(@"er box"">
+	<div class=""savedforlater box"">
 		<h2>Saved For Later ({{saved.length}})</h2>
 		<br />
 		<div v-for=""item in saved"">
 			<div class=""item"" v-if=""!item.isDeleted && item.isMovedToSaved"">
 				<div class=""image"">
 					<a v-bind:href=""item.url"">
-						<img width=""250"" v-bind:src=""item.image"" alt="""" />
+						");
+            EndContext();
+            BeginContext(1339, 50, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2a1dbf3c1650e9ccae08f88014d07276ba08c8ab7471", async() => {
+            }
+            );
+            __Common_Extensions_ImgHelper = CreateTagHelper<global::Common.Extensions.ImgHelper>();
+            __tagHelperExecutionContext.Add(__Common_Extensions_ImgHelper);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_2);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_0);
+            __Common_Extensions_ImgHelper.Alt = (string)__tagHelperAttribute_1.Value;
+            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            EndContext();
+            BeginContext(1389, 426, true);
+            WriteLiteral(@"
 					</a>
 				</div>
 				<div class=""info"">

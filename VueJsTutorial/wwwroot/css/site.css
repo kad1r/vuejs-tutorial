@@ -29,3 +29,5 @@ body { /* Margin bottom by footer height */ margin-bottom: 60px; }
 .item, .image, .info { width: 48%; float: left; padding: 1%; }
 	.image img { margin: 0 auto; max-height: 150px; }
 .subtotal { width: 98%; float: left; margin-right: 1%; text-align: right; }
+
+.requiredField { border-left: solid 4px #0062cc; }

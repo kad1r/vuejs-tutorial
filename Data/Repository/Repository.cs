@@ -240,6 +240,14 @@ namespace Data.Repository
 			}
 		}
 
+		public IQueryable<T> QueryNoTracking()
+		{
+			_context.ChangeTracker.AutoDetectChangesEnabled = false;
+			_context.ChangeTracker.LazyLoadingEnabled = false;
+
+			return _dbSet.AsNoTracking();
+		}
+
 		public IQueryable<T> QueryNoTracking(Expression<Func<T, bool>> expression)
 		{
 			_context.ChangeTracker.AutoDetectChangesEnabled = false;

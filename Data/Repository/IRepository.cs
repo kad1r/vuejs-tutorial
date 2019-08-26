@@ -31,6 +31,7 @@ namespace Data.Repository
 		IQueryable<T> QueryAll(Expression<Func<T, bool>> expression);
 		IQueryable<T> Query();
 		IQueryable<T> Query(Expression<Func<T, bool>> expression);
+		IQueryable<T> QueryNoTracking();
 		IQueryable<T> QueryNoTracking(Expression<Func<T, bool>> expression);
 		IQueryable<T> Include(Expression<Func<T, object>> expression);
 		IQueryable<T> Include(params Expression<Func<T, object>>[] includes);
