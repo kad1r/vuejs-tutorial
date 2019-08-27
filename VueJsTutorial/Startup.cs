@@ -33,7 +33,7 @@ namespace VueJsTutorial
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 
-			services.AddDbContext<Model.Models.AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			services.AddDbContext<Model.Models.AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 		}

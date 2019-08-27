@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>@ViewData["Title"] - VueJS</title>
 	<environment include="Development">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
 	</environment>
 	<environment exclude="Development">
 		@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
@@ -14,8 +14,8 @@
 			crossorigin="anonymous"
 			integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>*@
 	</environment>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" />
-	<link rel="stylesheet" href="~/css/site.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet"/>
+	<link rel="stylesheet" href="~/css/site.css"/>
 </head>
 <body>
 	<header>
@@ -34,13 +34,16 @@
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="ProductActivity" asp-action="Form">Product Form</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<div id="vue-app" class="container">
-		<partial name="_CookieConsentPartial" />
+		<partial name="_CookieConsentPartial"/>
 		<main role="main" class="pb-3">
 			@RenderBody()
 		</main>
@@ -56,7 +59,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 		@*<script src="~/lib/jquery/dist/jquery.js"></script>
-		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>*@
+			<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>*@
 	</environment>
 	<environment exclude="Development">
 		@*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -72,8 +75,10 @@
 					integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
 			</script>*@
 	</environment>
-	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/js/ajaxHelper.js" asp-append-version="true"></script>
 	<script src="~/js/helper.js" asp-append-version="true"></script>
+	<script src="~/js/toolbar.js" asp-append-version="true"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
 	@RenderSection("Scripts", required: false)
 </body>
 </html>

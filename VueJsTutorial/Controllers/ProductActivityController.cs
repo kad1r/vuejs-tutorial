@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Data.UnitOfWork;
+﻿using Data.UnitOfWork;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Models;
 using Model.ViewModels;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace VueJsTutorial.Controllers
 {
 	public class ProductActivityController : Controller
 	{
 		private readonly IUnitOfWork _uow;
-
-		public ProductActivityController()
-		{
-			_uow = new UnitOfWork(new AppDbContext());
-		}
 
 		public ProductActivityController(IUnitOfWork uow)
 		{
@@ -31,6 +24,8 @@ namespace VueJsTutorial.Controllers
 
 		public void FormInit(ProductActivityVM model)
 		{
+			model.Product = new Product();
+			model.ProductActivity = new ProductActivity();
 			model.ActivityTypes = _uow.Repository<ActivityType>().QueryNoTracking(x => x.IsActive).ToList();
 			model.WareHouses = _uow.Repository<WareHouse>().QueryNoTracking(x => x.IsActive).ToList();
 		}
@@ -49,7 +44,6 @@ namespace VueJsTutorial.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-
 			}
 
 			return View();

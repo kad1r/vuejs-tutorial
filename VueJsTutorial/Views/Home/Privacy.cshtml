@@ -4,11 +4,12 @@
 	ViewData["Title"] = "Privacy Policy";
 }
 
-	<form>
-		@*<otextboxfor asp-for="Email" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>*@
-		<otextboxfor title="regex is not valid" asp-for="Price" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-		<br />
-		@*<div class="form-group row">
+<form>
+	<otextboxfor asp-for="Email" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+	<otextboxfor title="regex is not valid" asp-for="Price" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+
+	<br/>
+	@*<div class="form-group row">
 				<olabelfor expression="Heading" class="control-label col-4"></olabelfor>
 				<otextboxfor expression="Heading" class="form-control col-8"></otextboxfor>
 			</div>
@@ -16,7 +17,7 @@
 		<input asp-for="Heading" class="form-control"/>
 			<input asp-for="Password" class="form-control"/>
 		<div class="clearfix"></div>*@
-		<p>
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</p>
-	</form>
+	<p>
+		<button type="submit" id="toolbar_save" class="btn btn-primary">Submit</button>
+	</p>
+</form>

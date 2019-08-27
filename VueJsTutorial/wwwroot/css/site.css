@@ -5,7 +5,7 @@ a.navbar-brand { white-space: normal; text-align: center; word-break: break-all;
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html { font-size: 14px; font-family: 'Roboto', sans-serif; }
+html { font-size: 14px !important; font-family: 'Roboto', sans-serif; }
 
 @media (min-width: 768px) {
 	html { font-size: 16px; }
@@ -31,3 +31,15 @@ body { /* Margin bottom by footer height */ margin-bottom: 60px; }
 .subtotal { width: 98%; float: left; margin-right: 1%; text-align: right; }
 
 .requiredField { border-left: solid 4px #0062cc; }
+.requiredFieldError { border: solid 1px #dc3545; border-left: solid 4px #dc3545; }
+
+.primary-color { color: #007bff; }
+.secondary-color { color: #6c757d; }
+.success-color { color: #28a745; }
+.danger-color { color: #dc3545; }
+.warning-color { color: #ffc107; }
+.info-color { color: #17a2b8; }
+.light-color { color: #f8f9fa; }
+.dark-color { color: #353535; }
+.white-color { color: #fff; }
+.transparent { color: transparent !important; }

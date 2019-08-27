@@ -1,7 +1,146 @@
 ﻿@model ProductActivityVM
 
 @{
-    ViewData["Title"] = "Product Activity Form";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Product Activity Form";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div id="formApp">
+	<h5>Product Master</h5>
+	<br/>
+	<div class="row">
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.Product.Heading" class="control-label col-4"></label>
+				<input v-model="result.product.heading" asp-for="@Model.Product.Heading" class="form-control col-8 _master"/>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.Product.Description" class="control-label col-4"></label>
+				<input v-model="result.product.description" asp-for="@Model.Product.Description" class="form-control col-8 _master"/>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.Product.Barcode" class="control-label col-4"></label>
+				<input v-model="result.product.barcode" asp-for="@Model.Product.Barcode" class="form-control col-8 _master"/>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.Product.Email" class="control-label col-4"></label>
+				<input v-model="result.product.email" asp-for="@Model.Product.Email" class="form-control col-8 _master"/>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.Product.Price" class="control-label col-4"></label>
+				<input v-model="result.product.price" asp-for="@Model.Product.Price" class="form-control col-8 _master"/>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.Product.ProductionYear" class="control-label col-4"></label>
+				<input v-model="result.product.productionYear" asp-for="@Model.Product.ProductionYear" class="form-control col-8 _master"/>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<h5>Product Activity</h5>
+	<br/>
+	<div class="row">
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.ProductActivity.ActivityTypeId" class="control-label col-4"></label>
+				<select v-model="result.productActivity.activityTypeId" asp-for="@Model.ProductActivity.ActivityTypeId" class="form-control col-8">
+					<option value="0">Please select activity type</option>
+					@foreach (var item in Model.ActivityTypes)
+					{
+						<option value="@item.Id">@item.Heading</option>
+					}
+				</select>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.ProductActivity.WareHouseId" class="control-label col-4"></label>
+				<select v-model="result.productActivity.wareHouseId" asp-for="@Model.ProductActivity.WareHouseId" class="form-control col-8">
+					<option value="0">Please select warehouse</option>
+					@foreach (var item in Model.WareHouses)
+					{
+						<option value="@item.Id">@item.Heading</option>
+					}
+				</select>
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label asp-for="@Model.ProductActivity.InvoiceNumber" class="control-label col-4"></label>
+				<input v-model="result.productActivity.invoiceNumber" asp-for="@Model.ProductActivity.InvoiceNumber" class="form-control col-8"/>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<button v-on:click="submit" class="btn btn-primary pull-right">Add</button>
+	<br/>
+	<div class="table-responsive">
+		<h6>Product Activity Details</h6>
+		<table class="table">
+			<thead>
+				<tr>
+					<td>Activity</td>
+					<td>Warehouse</td>
+					<td>Invoice No</td>
+				</tr>
+			</thead>
+			<tbody v-if="result.master">
+				<tr v-for="item in result.master">
+					<td>{{item.Product_Heading}}</td>
+				</tr>
+			</tbody>
+			<tbody v-else>
+				<tr>
+					<td>{{result}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+@section scripts {
+	<script type="text/javascript">
+		var selected = 0, master = {}, rowIds = [], details = [], data = @Json.Serialize(Model);
+		//data.master = {};
+		console.log(data);
+
+		var vm = new Vue({
+			el: "#formApp",
+			name: "productactivityform",
+			data: {
+				result: []
+			},
+			methods: {
+				submit: function () {
+					var masterFields = document.querySelectorAll("._master");
+
+					for (var i = 0; i < masterFields.length; i++) {
+						master[masterFields[i].id] = masterFields[i].value;
+					}
+
+					var obj = [];
+					obj.push(master);
+
+					master["product_activities"] = [];
+					Vue.set(this.result, "master", obj);
+					//this.result.wareHouses = [];
+					console.log(master);
+					console.log(data);
+				}
+			},
+			created() {
+				this.result = data;
+			}
+		});
+	</script>
+}

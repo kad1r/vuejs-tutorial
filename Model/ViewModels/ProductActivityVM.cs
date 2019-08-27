@@ -1,12 +1,12 @@
 ﻿using Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Model.ViewModels
 {
 	public class ProductActivityVM
 	{
+		public Product Product { get; set; }
+		public ProductActivity ProductActivity { get; set; }
 		public IList<Product> Products { get; set; }
 		public IList<ActivityType> ActivityTypes { get; set; }
 		public IList<WareHouse> WareHouses { get; set; }

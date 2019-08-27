@@ -20,6 +20,7 @@ namespace Model.Models
 		[DataType(DataType.EmailAddress)]
 		[Required(ErrorMessage = "Email is required.")]
 		[StringLength(20)]
+		[RegularExpression(@"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", ErrorMessage = "Please enter a valid email address")]
 		public string Email { get; set; }
 
 		[Display(Name = "Password")]
@@ -31,7 +32,7 @@ namespace Model.Models
 		[Display(Name = "Price")]
 		[Required(ErrorMessage = "Price is required.")]
 		[DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = true)]
-		[RegularExpression("[0,9]")]
+		[RegularExpression(@"^\d*([.,]*\d{1,4})$")]
 		public decimal Price { get; set; }
 
 		public DateTime CreatedDate { get; set; }
