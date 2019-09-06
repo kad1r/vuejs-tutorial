@@ -33,6 +33,12 @@
 		<div class="col-6">
 			<otextboxfor v-model-name="result.productActivityForJson.InvoiceNumber" asp-for="@Model.ProductActivityForJson.InvoiceNumber" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
 		</div>
+		<div class="col-6">
+			<div class="form-group row">
+				<label class="control-label col-4">Date</label>
+				<input type="text" class="form-control date-control col-8" />
+			</div>
+		</div>
 	</div>
 	<br />
 	<button v-on:click.prevent="submit" class="btn btn-primary pull-right">Add Product Detail</button>

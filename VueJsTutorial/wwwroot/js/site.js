@@ -66,4 +66,5 @@ function pageInit() {
 	selectedSubRows.length = 0;
 	selected = 0;
 	selectedObj = {};
+	flatpickr(".date-control");
 }

@@ -12,10 +12,16 @@ Array.prototype.insert = function (value) {
 	}
 }
 
-function myNoty(message, type) {
+// #region noty
+
+function showNoty(message, type) {
 	var n = new Noty({
 		text: message, type: type,
 		layout: "bottomRight",
-		container: ".asdasd"
+		theme: "light",
+		timeout: 2000,
+		progressBar: true
 	}).show();
 }
+
+// #endregion

@@ -1,4 +1,4 @@
 ﻿window.onload = function () {
 	pageInit();
-	myNoty("Hi there!", "success");
+	showNoty("Hi there!", "success");
 }
