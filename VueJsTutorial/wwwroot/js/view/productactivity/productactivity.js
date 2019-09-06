@@ -44,9 +44,9 @@
 			if (selectedRows.length == 1) {
 
 			} else if (selectedRows.length > 1) {
-				toastr.warning("Please select only 1 row for edit.");
+				showNoty("Please select only 1 row for edit.", "warning");
 			} else {
-				toastr.warning("Please select row for edit.");
+				showNoty("Please select a row for edit.", "warning");
 			}
 		}
 	},

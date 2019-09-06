@@ -19,7 +19,7 @@ function showNoty(message, type) {
 		text: message, type: type,
 		layout: "bottomRight",
 		theme: "light",
-		timeout: 2000,
+		timeout: 2500,
 		progressBar: true
 	}).show();
 }
