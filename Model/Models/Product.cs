@@ -16,7 +16,7 @@ namespace Model.Models
 		public string Description { get; set; }
 		public string Barcode { get; set; }
 
-		[Display(Name = "Eposta")]
+		[Display(Name = "Email")]
 		[DataType(DataType.EmailAddress)]
 		[Required(ErrorMessage = "Email is required.")]
 		[StringLength(20)]

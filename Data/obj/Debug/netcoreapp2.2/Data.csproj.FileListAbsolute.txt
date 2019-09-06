@@ -25,3 +25,5 @@ D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.Assembl
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.csproj.CopyComplete
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.dll
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.pdb
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml

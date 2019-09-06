@@ -1,6 +1,7 @@
 ﻿using Data.UnitOfWork;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Model.Models;
 using Model.ViewModels;
 using System.Linq;
@@ -17,17 +18,27 @@ namespace VueJsTutorial.Controllers
 			_uow = uow;
 		}
 
-		public async Task<IActionResult> Index()
+		public IActionResult Index()
 		{
 			return View();
 		}
 
 		public void FormInit(ProductActivityVM model)
 		{
-			model.Product = new Product();
-			model.ProductActivity = new ProductActivity();
-			model.ActivityTypes = _uow.Repository<ActivityType>().QueryNoTracking(x => x.IsActive).ToList();
-			model.WareHouses = _uow.Repository<WareHouse>().QueryNoTracking(x => x.IsActive).ToList();
+			model.ActivityTypes = _uow.Repository<ActivityType>()
+				.QueryNoTracking(x => x.IsActive)
+				.Select(x => new SelectListItem
+				{
+					Text = x.Heading,
+					Value = x.Id.ToString()
+				}).ToList();
+			model.WareHouses = _uow.Repository<WareHouse>()
+				.QueryNoTracking(x => x.IsActive)
+				.Select(x => new SelectListItem
+				{
+					Text = x.Heading,
+					Value = x.Id.ToString()
+				}).ToList();
 		}
 
 		public async Task<IActionResult> Form()

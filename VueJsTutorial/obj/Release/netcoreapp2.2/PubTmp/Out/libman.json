@@ -1,0 +1,30 @@
+{
+	"version": "1.0",
+	"defaultProvider": "cdnjs",
+	"libraries": [
+		{
+			"library": "bootbox.js@4.4.0",
+			"destination": "wwwroot/lib/bootbox.js/"
+		},
+		{
+			"library": "toastr.js@2.1.4",
+			"destination": "wwwroot/lib/toastr.js/"
+		},
+		{
+			"library": "bootstrap-datetimepicker@4.17.47",
+			"destination": "wwwroot/lib/bootstrap-datetimepicker/"
+		},
+		{
+			"library": "iCheck@1.0.2",
+			"destination": "wwwroot/lib/iCheck/"
+		},
+		{
+			"library": "metisMenu@3.0.4",
+			"destination": "wwwroot/lib/metisMenu/"
+		},
+		{
+			"library": "selectize.js@0.12.6",
+			"destination": "wwwroot/lib/selectize.js/"
+		}
+	]
+}

@@ -1,9 +1,11 @@
 ﻿/// <reference path="helper.js" />
+
 "use strict";
 
 window.isValid = false;
 
-var form = document.querySelector("form"),
+var selectedObj = {}, selectedRows = [], selectedSubRows = [], searchArr = [], sortArr = [],
+	form = document.querySelector("form"),
 	toolbar_save = get("toolbar_save"),
 	requiredFields = document.getElementsByClassName("requiredField");
 
@@ -49,7 +51,7 @@ function checkElementValidation(element) {
 }
 
 function isNullOrWhiteSpace(value) {
-	return typeof value === "" && (value != null || value != "") ? true : false;
+	return typeof value === "" && (value != null || value != "");
 }
 
 function matchRegex(regex, value) {
@@ -57,4 +59,11 @@ function matchRegex(regex, value) {
 		result = _regex.exec(value);
 
 	return result != null ? result.length : false;
+}
+
+function pageInit() {
+	selectedRows.length = 0;
+	selectedSubRows.length = 0;
+	selected = 0;
+	selectedObj = {};
 }

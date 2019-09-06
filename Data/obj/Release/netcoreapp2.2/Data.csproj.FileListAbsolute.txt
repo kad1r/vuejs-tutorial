@@ -1,0 +1,15 @@
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Data.deps.json
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Data.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Data.pdb
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Model.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Model.pdb
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Model.dll.config
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Release\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.csprojAssemblyReference.cache
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.AssemblyInfoInputs.cache
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.AssemblyInfo.cs
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.csproj.CopyComplete
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.dll
+D:\Development\Tutorials\VueJsTutorial\Data\obj\Release\netcoreapp2.2\Data.pdb
