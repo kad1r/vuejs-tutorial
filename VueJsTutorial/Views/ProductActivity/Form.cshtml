@@ -8,69 +8,70 @@
 <div id="formApp">
 	<h5>Product Master</h5>
 	<br />
-	<div class="row product_master">
-		<div class="col-6">
-			<otextboxfor asp-for="Product.Heading" v-model-name="result.product.heading" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-			<otextboxfor asp-for="Product.Description" v-model-name="result.product.description" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-			<otextboxfor asp-for="Product.Barcode" v-model-name="result.product.barcode" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-		</div>
-		<div class="col-6">
-			<otextboxfor asp-for="Product.Email" v-model-name="result.product.email" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-			<otextboxfor asp-for="Product.Price" v-model-name="result.product.price" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-			<otextboxfor asp-for="Product.ProductionYear" v-model-name="result.product.productionYear" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-		</div>
-	</div>
-	<hr />
-	<h5>Product Activity</h5>
-	<br />
-	<div class="row product_activities">
-		<div class="col-6">
-			<odropdownfor v-model-name="result.productActivityForJson.ActivityTypeId" v-get-text="true" asp-for="@Model.ProductActivityForJson.ActivityTypeId" asp-items="@Model.ActivityTypes" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></odropdownfor>
-		</div>
-		<div class="col-6">
-			<odropdownfor v-model-name="result.productActivityForJson.WareHouseId" v-get-text="true" asp-for="@Model.ProductActivityForJson.WareHouseId" asp-items="@Model.WareHouses" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></odropdownfor>
-		</div>
-		<div class="col-6">
-			<otextboxfor v-model-name="result.productActivityForJson.InvoiceNumber" asp-for="@Model.ProductActivityForJson.InvoiceNumber" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
-		</div>
-		<div class="col-6">
-			<div class="form-group row">
-				<label class="control-label col-4">Date</label>
-				<input type="text" class="form-control date-control col-8" />
+	<form>
+		<div class="row product_master">
+			<div class="col-6">
+				<otextboxfor asp-for="Product.Heading" v-model-name="result.product.heading" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+				<otextboxfor asp-for="Product.Description" v-model-name="result.product.description" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+				<otextboxfor asp-for="Product.Barcode" v-model-name="result.product.barcode" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+			</div>
+			<div class="col-6">
+				<otextboxfor asp-for="Product.Email" v-model-name="result.product.email" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+				<otextboxfor asp-for="Product.Price" v-model-name="result.product.price" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+				<otextboxfor asp-for="Product.ProductionYear" v-model-name="result.product.productionYear" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
 			</div>
 		</div>
-	</div>
-	<p>
-		<button v-on:click.prevent="submit" class="btn btn-primary pull-right">Add Product Detail</button>
-	</p>
-	<br /><br />
-	<div class="table-responsive" v-if="result.productActivities.length > 0">
-		<h6>Product Activity Details</h6>
-		<table class="table sub_list">
-			<thead>
-				<tr>
-					<td colspan="100%">
-						<a v-on:click.prevent="handleEdit" href="javascript:void(0);" class="edit-list-item"><i class="fa fa-pencil"></i> Edit</a>
-						<a href="javascript:void(0);" class="delete-list-item"><i class="fa fa-trash"></i> Delete</a>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>Activity</td>
-					<td>Warehouse</td>
-					<td>Invoice No</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="activity in result.productActivities" v-if="activity.Show">
-					<td><input type="checkbox" class="" value="activity.RowId" @@change="handleSelection(activity)" /></td>
-					<td>{{activity.ActivityTypeIdHeading}}</td>
-					<td>{{activity.WareHouseIdHeading}}</td>
-					<td>{{activity.InvoiceNumber}}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<hr />
+		<h5>Product Activity</h5>
+		<br />
+		<div class="row product_activities">
+			<div class="col-6">
+				<odropdownfor v-model-name="result.productActivityForJson.ActivityTypeId" v-get-text="true" asp-for="@Model.ProductActivityForJson.ActivityTypeId" asp-items="@Model.ActivityTypes" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></odropdownfor>
+			</div>
+			<div class="col-6">
+				<odropdownfor v-model-name="result.productActivityForJson.WareHouseId" v-get-text="true" asp-for="@Model.ProductActivityForJson.WareHouseId" asp-items="@Model.WareHouses" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></odropdownfor>
+			</div>
+			<div class="col-6">
+				<otextboxfor v-model-name="result.productActivityForJson.InvoiceNumber" asp-for="@Model.ProductActivityForJson.InvoiceNumber" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+			</div>
+			<div class="col-6">
+				<otextboxfor v-model-name="result.productActivityForJson.ActivityDate" asp-for="@Model.ProductActivityForJson.ActivityDate" input-css="form-control col-8 date-control" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+			</div>
+		</div>
+		<p>
+			<button v-on:click.prevent="handleSubmit" class="btn btn-primary pull-right">Add Product Detail</button>
+		</p>
+		<br /><br />
+		<div class="table-responsive" v-if="result.productActivities.length > 0">
+			<h6>Product Activity Details</h6>
+			<table class="table sub_list">
+				<thead>
+					<tr>
+						<td colspan="100%">
+							<a v-on:click.prevent="handleEdit" href="javascript:void(0);" class="edit-list-item"><i class="fa fa-pencil"></i> Edit</a>
+							<a href="javascript:void(0);" class="delete-list-item"><i class="fa fa-trash"></i> Delete</a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Activity</td>
+						<td>Warehouse</td>
+						<td>Invoice No</td>
+						<td>Activity Date</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="activity in result.productActivities" v-if="activity.Show">
+						<td><input type="checkbox" class="" value="activity.RowId" @@change="handleSelection(activity)" /></td>
+						<td>{{activity.ActivityType}}</td>
+						<td>{{activity.WareHouse}}</td>
+						<td>{{activity.InvoiceNumber}}</td>
+						<td>{{activity.ActivityDate}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
 </div>
 
 @section scripts {

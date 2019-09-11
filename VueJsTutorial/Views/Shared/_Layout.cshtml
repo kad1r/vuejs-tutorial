@@ -4,9 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>@ViewData["Title"] - VueJS</title>
-	<environment include="Development">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
-	</environment>
+	<environment include="Development"></environment>
 	<environment exclude="Development">
 		@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
 			asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
@@ -16,10 +14,7 @@
 	</environment>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet"/>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-	<link href="~/lib/noty/noty.min.css" rel="stylesheet"/>
-	<link href="~/lib/flatpickr/flatpickr.min.css" rel="stylesheet"/>
-	<link href="~/lib/flatpickr/ie.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="~/css/site.css"/>
+	<link href="~/release/site.min.css" rel="stylesheet"/>
 </head>
 <body>
 	<header>
@@ -58,10 +53,6 @@
 		</div>
 	</footer>
 	<environment include="Development">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 		@*<script src="~/lib/jquery/dist/jquery.js"></script>
 			<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>*@
 	</environment>
@@ -79,15 +70,15 @@
 					integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
 			</script>*@
 	</environment>
-
-	<script src="~/lib/flatpickr/flatpickr.min.js"></script>
-	<script src="~/lib/noty/noty.min.js"></script>
-	<script src="~/js/vuehelpers.js" asp-append-version="true"></script>
+	<script src="~/release/library-bundle.js" asp-append-version="true"></script>
+	<script src="~/release/vue-bundle.js" asp-append-version="true"></script>
+	<script src="~/js/declarations.js" asp-append-version="true"></script>
 	<script src="~/js/events.js" asp-append-version="true"></script>
+	<script src="~/js/vuehelpers.js" asp-append-version="true"></script>
 	<script src="~/js/ajaxHelper.js" asp-append-version="true"></script>
 	<script src="~/js/helper.js" asp-append-version="true"></script>
 	<script src="~/js/toolbar.js" asp-append-version="true"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/release/site.js" asp-append-version="true"></script>
 	@RenderSection("Scripts", required: false)
 </body>
 </html>

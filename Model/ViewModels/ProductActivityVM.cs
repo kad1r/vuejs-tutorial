@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Model.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -18,18 +19,25 @@ namespace Model.ViewModels
 
 	public class ProductActivityForJson : BaseModel
 	{
+		[Required]
 		[Display(Name = "Activity Type")]
 		public int? ActivityTypeId { get; set; }
 
 		public string ActivityType { get; set; }
 
+		[Required]
 		[Display(Name = "WareHouse")]
 		public int? WareHouseId { get; set; }
 
 		public string WareHouse { get; set; }
 
+		[Required]
 		[Display(Name = "Invoice No.")]
 		public string InvoiceNumber { get; set; }
+
+		[Required]
+		[Display(Name = "Activity Date")]
+		public DateTime ActivityDate { get; set; }
 	}
 
 	public class ProductJson : BaseModel

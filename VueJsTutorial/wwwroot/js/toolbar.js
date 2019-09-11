@@ -1,5 +1,4 @@
-﻿/// <reference path="ajaxhelper.js" />
-/// <reference path="helper.js" />
+﻿;
 
 function submitForm(event) {
 	var isValid = checkFormValidation();

@@ -1,14 +1,27 @@
 {
 	"version": "1.0",
 	"defaultProvider": "cdnjs",
+	"defaultDestination": "wwwroot/lib/",
 	"libraries": [
+		{
+			"library": "vue@2.6.10",
+			"destination": "wwwroot/lib/vuejs/"
+		},
+		{
+			"library": "axios@0.19.0",
+			"destination": "wwwroot/lib/axios/"
+		},
+		{
+			"library": "lodash.js@4.17.15",
+			"destination": "wwwroot/lib/lodash/"
+		},
+		{
+			"library": "twitter-bootstrap@4.3.1",
+			"destination": "wwwroot/lib/bootstrap/"
+		},
 		{
 			"library": "bootbox.js@4.4.0",
 			"destination": "wwwroot/lib/bootbox.js/"
-		},
-		{
-			"library": "bootstrap-datetimepicker@4.17.47",
-			"destination": "wwwroot/lib/bootstrap-datetimepicker/"
 		},
 		{
 			"library": "iCheck@1.0.2",
@@ -29,6 +42,16 @@
 		{
 			"library": "noty@3.1.4",
 			"destination": "wwwroot/lib/noty/"
+		},
+		{
+			"provider": "jsdelivr",
+			"library": "vuelidate@0.7.4",
+			"destination": "wwwroot/lib/vuelidate/"
+		},
+		{
+			"provider": "jsdelivr",
+			"library": "vuelidate-error-extractor@2.4.0",
+			"destination": "wwwroot/lib/vuelidate-error-extractor/"
 		}
 	]
 }

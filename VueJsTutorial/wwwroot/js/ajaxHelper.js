@@ -1,4 +1,5 @@
-﻿"use strict"
+﻿;
+"use strict"
 
 function $get(ref, url) {
 	axios.get(url)
