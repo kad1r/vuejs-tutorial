@@ -1,0 +1,21 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+	<script type="text/javascript">
+		
+
+		var vue = new Vue({
+			el: "#vue-app",
+			data: {
+				result: []
+			},
+			created() {
+				$get(this, "/data/productactivity.json");
+			}
+		});
+	</script>
+}

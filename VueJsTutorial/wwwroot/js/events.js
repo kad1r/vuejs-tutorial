@@ -7,5 +7,4 @@ Vue.use(window.vuelidate.default);
 
 window.onload = function () {
 	pageInit();
-	showNoty("Hi there!", "success");
 }

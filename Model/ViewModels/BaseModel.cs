@@ -1,4 +1,6 @@
-﻿namespace Model.ViewModels
+﻿using Common.Dto;
+
+namespace Model.ViewModels
 {
 	public class BaseModel
 	{

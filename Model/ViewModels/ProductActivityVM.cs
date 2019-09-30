@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Common.Dto;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Model.Models;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Model.ViewModels
 {
-	public class ProductActivityVM
+	public class ProductActivityVM : BaseVM
 	{
 		public Product Product { get; set; } = new Product();
 		public ProductActivityForJson ProductActivityForJson { get; set; } = new ProductActivityForJson();

@@ -4,6 +4,74 @@
     "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj": {}
   },
   "projects": {
+    "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -74,11 +142,6 @@
           "assetTargetFallback": true,
           "warn": true
         }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
-        }
       }
     },
     "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
@@ -106,7 +169,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -150,11 +217,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }

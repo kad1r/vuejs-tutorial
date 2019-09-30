@@ -5,11 +5,11 @@
 window.isValid = false;
 
 var form = document.querySelector("form"),
-	toolbar_save = get("toolbar_save"),
+	toolbarSave = get("toolbar_save"),
 	requiredFields = document.getElementsByClassName("requiredField");
 
-if (typeof toolbar_save != "undefined" && toolbar_save != null && toolbar_save.length > 0) {
-	toolbar_save.addEventListener("click", submitForm);
+if (typeof toolbarSave !== "undefined" && toolbarSave !== null && toolbarSave.length > 0) {
+	toolbarSave.addEventListener("click", submitForm);
 }
 
 function pageInit() {
@@ -19,6 +19,7 @@ function pageInit() {
 	selectedObj = {};
 	flatpickr(".date-control");
 
+	// Adding validation check when input blur
 	for (var i = 0; i < requiredFields.length; i++) {
 		requiredFields[i].addEventListener("blur", checkElementValidation);
 	}

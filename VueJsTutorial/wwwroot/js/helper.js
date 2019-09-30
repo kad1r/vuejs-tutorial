@@ -14,6 +14,22 @@ Array.prototype.insert = function (value) {
 	}
 }
 
+Array.prototype.empty = function () {
+	this.length = 0;
+}
+
+Array.prototype.findbyid = function (id) {
+	return this.find(x => x.RowId == id);
+}
+
+function unCheck(area) {
+	var checkboxes = document.querySelectorAll(area + " input[type=checkbox]");
+
+	for (var i = 0; i < checkboxes.length; i++) {
+		checkboxes[i].checked = false;
+	}
+}
+
 // #region noty
 
 function showNoty(message, type) {
@@ -39,10 +55,18 @@ function getRowId(arr) {
 	return id;
 }
 
-function getTextOfSelectInput(id) {
+function getTextOfSelectInput(id, value) {
 	var field = document.getElementById(id);
 
-	return field.options[field.selectedIndex].text;
+	if (typeof value !== "undefined") {
+		for (var i = 0; i < field.options.length; i++) {
+			if (value == field.options[i].value) {
+				return field.options[i].text;
+			}
+		}
+	} else {
+		return field.options[field.selectedIndex].text;
+	}
 }
 
 function isNullOrWhiteSpace(value) {
@@ -70,8 +94,16 @@ function matchRegex(regex, value) {
 function checkValidation(area) {
 	var fields = document.querySelectorAll(area + " .requiredField");
 
+	requiredFieldsByArea.empty();
+
 	for (var i = 0; i < fields.length; i++) {
 		checkElementValidation(fields[i]);
+	}
+
+	if (requiredFieldsByArea.find(x => x == true)) {
+		return false;
+	} else {
+		return true;
 	}
 }
 
@@ -95,9 +127,21 @@ function checkElementValidation(element) {
 				element.classList.remove("requiredFieldError");
 			} else {
 				element.classList.add("requiredFieldError");
+				requiredFieldsByArea.push(true);
 			}
 		}
 	} else {
 		element.classList.add("requiredFieldError");
+		requiredFieldsByArea.push(true);
+	}
+}
+
+function checkSelectedRows(rows) {
+	if (rows.length == 1) {
+		console.log(selectedRows);
+	} else if (rows.length > 1) {
+		showNoty("Please select only 1 row for edit.", "warning");
+	} else {
+		showNoty("Please select a row for edit.", "warning");
 	}
 }

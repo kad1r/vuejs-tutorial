@@ -14,3 +14,5 @@ D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.Ass
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.csproj.CopyComplete
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.dll
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.pdb
+D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.xml

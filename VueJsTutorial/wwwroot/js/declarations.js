@@ -7,4 +7,4 @@ const DataStates = {
 	NoChange: 4
 };
 
-var selectedObj = {}, selectedRows = [], selectedSubRows = [], searchArr = [], sortArr = [];
+var selectedObj = {}, selectedRows = [], selectedSubRows = [], searchArr = [], sortArr = [], requiredFieldsByArea = [];

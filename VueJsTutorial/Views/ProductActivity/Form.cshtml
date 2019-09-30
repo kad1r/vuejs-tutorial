@@ -1,5 +1,7 @@
 ﻿@model ProductActivityVM
 
+@using Microsoft.AspNetCore.Hosting;
+
 @{
 	ViewData["Title"] = "Product Activity Form";
 	Layout = "~/Views/Shared/_Layout.cshtml";
@@ -35,42 +37,14 @@
 				<otextboxfor v-model-name="result.productActivityForJson.InvoiceNumber" asp-for="@Model.ProductActivityForJson.InvoiceNumber" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
 			</div>
 			<div class="col-6">
-				<otextboxfor v-model-name="result.productActivityForJson.ActivityDate" asp-for="@Model.ProductActivityForJson.ActivityDate" input-css="form-control col-8 date-control" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
+				<otextboxfor v-on:change="handleChange" v-model-name="result.productActivityForJson.ActivityDate" asp-for="@Model.ProductActivityForJson.ActivityDate" input-css="form-control col-8 date-control" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
 			</div>
 		</div>
 		<p>
-			<button v-on:click.prevent="handleSubmit" class="btn btn-primary pull-right">Add Product Detail</button>
+			<button v-on:click.prevent="handleAdd" id="add" class="btn btn-primary pull-right">Add Product Detail</button>
 		</p>
 		<br /><br />
-		<div class="table-responsive" v-if="result.productActivities.length > 0">
-			<h6>Product Activity Details</h6>
-			<table class="table sub_list">
-				<thead>
-					<tr>
-						<td colspan="100%">
-							<a v-on:click.prevent="handleEdit" href="javascript:void(0);" class="edit-list-item"><i class="fa fa-pencil"></i> Edit</a>
-							<a href="javascript:void(0);" class="delete-list-item"><i class="fa fa-trash"></i> Delete</a>
-						</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>Activity</td>
-						<td>Warehouse</td>
-						<td>Invoice No</td>
-						<td>Activity Date</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr v-for="activity in result.productActivities" v-if="activity.Show">
-						<td><input type="checkbox" class="" value="activity.RowId" @@change="handleSelection(activity)" /></td>
-						<td>{{activity.ActivityType}}</td>
-						<td>{{activity.WareHouse}}</td>
-						<td>{{activity.InvoiceNumber}}</td>
-						<td>{{activity.ActivityDate}}</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+		<vue-list v-bind:data="result.productActivities" title="Product Activity Details" v-bind:headers="result.headers" v-on:editRow="handleEdit" v-on:deleteRow="handleDelete"></vue-list>
 	</form>
 </div>
 
@@ -78,5 +52,6 @@
 	<script type="text/javascript">
 		var selected = 0, activity_list = {}, selectedIds = [], modelData = @Json.Serialize(Model);
 	</script>
+	<script src="~/js/component/subListComponent.js"></script>
 	<script src="~/js/view/productactivity/productactivity.js"></script>
 }

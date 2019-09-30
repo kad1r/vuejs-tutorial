@@ -27,3 +27,9 @@ D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.dll
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.pdb
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Common.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Razor.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Common.pdb
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Razor.xml

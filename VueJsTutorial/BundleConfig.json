@@ -16,7 +16,7 @@
 	{
 		"outputFileName": "wwwroot/release/library-bundle.js",
 		"inputFiles": [
-			"wwwroot/lib/axios.js",
+			"wwwroot/lib/axios/axios.js",
 			"wwwroot/lib/flatpickr/flatpickr.js",
 			"wwwroot/lib/lodash/lodash.js",
 			"wwwroot/lib/noty/noty.js"

@@ -42,3 +42,5 @@ D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Vue
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTutorial.csproj.CopyComplete
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTutorial.dll
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTutorial.pdb
+D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\Component\SubListComponent.g.cshtml.cs
+D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\bin\Debug\netcoreapp2.2\appsettings.json

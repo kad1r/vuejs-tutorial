@@ -1,7 +1,9 @@
 ﻿using Data.UnitOfWork;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Configuration;
 using Model.Models;
 using Model.ViewModels;
 using System.Linq;
@@ -9,13 +11,16 @@ using System.Threading.Tasks;
 
 namespace VueJsTutorial.Controllers
 {
-	public class ProductActivityController : Controller
+	public class ProductActivityController : BaseController
 	{
 		private readonly IUnitOfWork _uow;
+		public readonly IConfiguration configuration;
+		public readonly IHostingEnvironment env;
 
-		public ProductActivityController(IUnitOfWork uow)
+		public ProductActivityController(IUnitOfWork uow, IHostingEnvironment environment) : base(environment)
 		{
 			_uow = uow;
+			env = environment;
 		}
 
 		public IActionResult Index()
@@ -25,6 +30,7 @@ namespace VueJsTutorial.Controllers
 
 		public void FormInit(ProductActivityVM model)
 		{
+			model.AppSettings = AppSettings;
 			model.ActivityTypes = _uow.Repository<ActivityType>()
 				.QueryNoTracking(x => x.IsActive)
 				.Select(x => new SelectListItem
