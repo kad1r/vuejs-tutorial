@@ -1,0 +1,2 @@
+﻿Insert Into Menus Values (null, 'Home', 0, 1, getdate(), null, 1, 0, '/home')
+Insert Into Menus Values (null, 'Product Form', 0, 1, getdate(), null, 1, 0, '/productactivity')

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Model.Models;
 
 namespace Model.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191001083236_Menu_Migration_Update3")]
+    partial class Menu_Migration_Update3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,14 +64,11 @@ namespace Model.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime");
 
-                    b.Property<string>("Url")
-                        .HasMaxLength(150);
-
                     b.HasKey("Id");
 
                     b.HasIndex("RootId");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menu");
                 });
 
             modelBuilder.Entity("Model.Models.MenuAuthorization", b =>
@@ -96,7 +95,7 @@ namespace Model.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("MenuAuthorizations");
+                    b.ToTable("MenuAuthorization");
                 });
 
             modelBuilder.Entity("Model.Models.Product", b =>
@@ -187,7 +186,7 @@ namespace Model.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("Model.Models.WareHouse", b =>

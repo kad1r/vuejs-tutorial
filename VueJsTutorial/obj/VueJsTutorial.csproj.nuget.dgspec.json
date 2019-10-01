@@ -288,7 +288,7 @@
             },
             "Microsoft.EntityFrameworkCore.DynamicLinq": {
               "target": "Package",
-              "version": "[1.0.18, )"
+              "version": "[1.0.19, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -298,11 +298,11 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[3.0.0, )"
             },
             "System.Linq.Dynamic.Core": {
               "target": "Package",
-              "version": "[1.0.18, )"
+              "version": "[1.0.19, )"
             }
           },
           "imports": [

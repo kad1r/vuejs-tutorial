@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Model.Models;
 
 namespace Model.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191001081823_Menu_Migration")]
+    partial class Menu_Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,8 +44,7 @@ namespace Model.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Heading")
                         .IsRequired()
@@ -55,21 +56,19 @@ namespace Model.Migrations
 
                     b.Property<bool>("IsRoot");
 
-                    b.Property<int?>("RootId");
+                    b.Property<int>("RootId");
+
+                    b.Property<int?>("RootMenuId");
 
                     b.Property<int>("Sequence");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Url")
-                        .HasMaxLength(150);
+                    b.Property<DateTime>("UpdatedDate");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RootId");
+                    b.HasIndex("RootMenuId");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menu");
                 });
 
             modelBuilder.Entity("Model.Models.MenuAuthorization", b =>
@@ -96,7 +95,7 @@ namespace Model.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("MenuAuthorizations");
+                    b.ToTable("MenuAuthorization");
                 });
 
             modelBuilder.Entity("Model.Models.Product", b =>
@@ -107,8 +106,7 @@ namespace Model.Migrations
 
                     b.Property<string>("Barcode");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Description");
 
@@ -131,8 +129,7 @@ namespace Model.Migrations
 
                     b.Property<int>("ProductionYear");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("UpdatedDate");
 
                     b.HasKey("Id");
 
@@ -145,8 +142,7 @@ namespace Model.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("ActivityDate")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("ActivityDate");
 
                     b.Property<int>("ActivityTypeId");
 
@@ -173,8 +169,7 @@ namespace Model.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Heading");
 
@@ -182,12 +177,11 @@ namespace Model.Migrations
 
                     b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("UpdatedDate");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("Model.Models.WareHouse", b =>
@@ -209,9 +203,9 @@ namespace Model.Migrations
 
             modelBuilder.Entity("Model.Models.Menu", b =>
                 {
-                    b.HasOne("Model.Models.Menu", "Root")
+                    b.HasOne("Model.Models.Menu", "RootMenu")
                         .WithMany()
-                        .HasForeignKey("RootId");
+                        .HasForeignKey("RootMenuId");
                 });
 
             modelBuilder.Entity("Model.Models.MenuAuthorization", b =>

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Models
 {
-	public class Product
+	public partial class Product
 	{
 		[Key]
 		public int Id { get; set; }
@@ -33,10 +34,15 @@ namespace Model.Models
 		[Required(ErrorMessage = "Price is required.")]
 		[DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = true)]
 		[RegularExpression(@"^\d*([.,]*\d{1,4})$")]
+		[Column(TypeName = "decimal(18,4)")]
 		public decimal Price { get; set; }
 
+		[Column(TypeName = "datetime")]
 		public DateTime CreatedDate { get; set; }
-		public DateTime UpdatedDate { get; set; }
+
+		[Column(TypeName = "datetime")]
+		public DateTime? UpdatedDate { get; set; }
+
 		public bool IsActive { get; set; }
 		public bool IsDeleted { get; set; }
 	}

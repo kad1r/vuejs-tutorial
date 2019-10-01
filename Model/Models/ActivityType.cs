@@ -2,7 +2,7 @@
 
 namespace Model.Models
 {
-	public class ActivityType
+	public partial class ActivityType
 	{
 		[Key]
 		public int Id { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Model.Models
 {
-	public class WareHouse
+	public partial class WareHouse
 	{
 		[Key]
 		public int Id { get; set; }

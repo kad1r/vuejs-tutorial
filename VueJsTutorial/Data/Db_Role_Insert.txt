@@ -1,0 +1,3 @@
+﻿Insert Into Roles Values('Admin', getdate(), null, 1, 0)
+Insert Into Roles Values('SuperUser', getdate(), null, 1, 0)
+Insert Into Roles Values('User', getdate(), null, 1, 0)
