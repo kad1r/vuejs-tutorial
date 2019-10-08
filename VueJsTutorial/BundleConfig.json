@@ -43,10 +43,13 @@
 	{
 		"outputFileName": "wwwroot/release/site.js",
 		"inputFiles": [
-			"wwwroot/js/site.js"
+			"wwwroot/js/localstorage.js",
+			"wwwroot/js/toolbar.js",
+			"wwwroot/js/site.js",
+			"wwwroot/js/heatmap.js"
 		],
 		"minify": {
-			"enabled": false,
+			"enabled": true,
 			"renameLocals": true
 		}
 	}

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Common.Attributes;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,6 +9,7 @@ namespace VueJsTutorial.Controllers
 {
 	public class HomeController : Controller
 	{
+		//[AjaxOnly]
 		public IActionResult Index()
 		{
 			var vm = new UserVM();

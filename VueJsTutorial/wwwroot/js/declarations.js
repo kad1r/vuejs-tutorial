@@ -8,3 +8,4 @@ const DataStates = {
 };
 
 var selectedObj = {}, selectedRows = [], selectedSubRows = [], searchArr = [], sortArr = [], requiredFieldsByArea = [];
+var isFormValid = false;

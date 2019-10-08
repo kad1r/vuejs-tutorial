@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "7da2b23719e1dc96f856b1046baefdab438a6074"
+    "signature": "697e37a52d6249761a2a734e70fbf7f029a09332"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.DynamicLinq": "1.0.18",
           "Model": "1.0.0",
-          "System.Linq.Dynamic.Core": "1.0.18"
+          "System.Linq.Dynamic.Core": "1.0.19"
         },
         "runtime": {
           "Data.dll": {}
@@ -108,7 +108,7 @@
       "Microsoft.EntityFrameworkCore.DynamicLinq/1.0.18": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.6",
-          "System.Linq.Dynamic.Core": "1.0.18"
+          "System.Linq.Dynamic.Core": "1.0.19"
         },
         "runtime": {
           "lib/netcoreapp2.1/Microsoft.EntityFrameworkCore.DynamicLinq.dll": {
@@ -481,11 +481,11 @@
           "System.Runtime.Extensions": "4.1.0"
         }
       },
-      "System.Linq.Dynamic.Core/1.0.18": {
+      "System.Linq.Dynamic.Core/1.0.19": {
         "runtime": {
           "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {
-            "assemblyVersion": "1.0.18.0",
-            "fileVersion": "1.0.18.0"
+            "assemblyVersion": "1.0.19.0",
+            "fileVersion": "1.0.19.0"
           }
         }
       },
@@ -673,9 +673,10 @@
           "Microsoft.Extensions.Configuration": "2.2.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0.0",
-          "Microsoft.AspNetCore.Razor": "2.2.0.0"
+          "Microsoft.AspNetCore.Razor": "2.2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0.0"
         },
         "runtime": {
           "Common.dll": {}
@@ -688,7 +689,7 @@
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.DynamicLinq": "1.0.18",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
-          "System.Linq.Dynamic.Core": "1.0.18",
+          "System.Linq.Dynamic.Core": "1.0.19",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0.0"
         },
         "runtime": {
@@ -703,14 +704,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Hosting.Abstractions.Reference/2.2.0.0": {
-        "runtime": {
-          "Microsoft.AspNetCore.Hosting.Abstractions.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Html.Abstractions.Reference/2.2.0.0": {
         "runtime": {
           "Microsoft.AspNetCore.Html.Abstractions.dll": {
@@ -722,6 +715,22 @@
       "Microsoft.AspNetCore.Razor.Reference/2.2.0.0": {
         "runtime": {
           "Microsoft.AspNetCore.Razor.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Core.Reference/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Core.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.Abstractions.Reference/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Hosting.Abstractions.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.18316"
           }
@@ -1057,12 +1066,12 @@
       "path": "system.linq/4.1.0",
       "hashPath": "system.linq.4.1.0.nupkg.sha512"
     },
-    "System.Linq.Dynamic.Core/1.0.18": {
+    "System.Linq.Dynamic.Core/1.0.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VonVK0xHQLzm+H6n5TE6wDwoCrVMuTBMdGQrXDfIAmf/klG/sJUai3bkMTlTgtqArB1NYEdWxUVqpPFnMZwVog==",
-      "path": "system.linq.dynamic.core/1.0.18",
-      "hashPath": "system.linq.dynamic.core.1.0.18.nupkg.sha512"
+      "sha512": "sha512-GFYslLz/1ZZ0+gbqYED2zlD0H95BIK4hOpIcEEEfTDDXAcKE5vpXQQseOGduNVjcJZOF3Wx+4npa2EjdFpuDgA==",
+      "path": "system.linq.dynamic.core/1.0.19",
+      "hashPath": "system.linq.dynamic.core.1.0.19.nupkg.sha512"
     },
     "System.Linq.Expressions/4.1.0": {
       "type": "package",
@@ -1233,17 +1242,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Hosting.Abstractions.Reference/2.2.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Microsoft.AspNetCore.Html.Abstractions.Reference/2.2.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "Microsoft.AspNetCore.Razor.Reference/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Core.Reference/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Hosting.Abstractions.Reference/2.2.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

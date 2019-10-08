@@ -92,9 +92,15 @@ function matchRegex(regex, value) {
 }
 
 function checkValidation(area) {
-	var fields = document.querySelectorAll(area + " .requiredField");
+	var fields;
 
 	requiredFieldsByArea.empty();
+
+	if (typeof area !== "undefined") {
+		fields = document.querySelectorAll(area + " .requiredField");
+	} else {
+		fields = document.querySelectorAll(".requiredField");
+	}
 
 	for (var i = 0; i < fields.length; i++) {
 		checkElementValidation(fields[i]);
@@ -103,6 +109,7 @@ function checkValidation(area) {
 	if (requiredFieldsByArea.find(x => x == true)) {
 		return false;
 	} else {
+		isFormValid = true;
 		return true;
 	}
 }

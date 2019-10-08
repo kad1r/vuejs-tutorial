@@ -9,7 +9,7 @@
 
 <div id="formApp">
 	<h5>Product Master</h5>
-	<br />
+	<br/>
 	<form>
 		<div class="row product_master">
 			<div class="col-6">
@@ -23,9 +23,9 @@
 				<otextboxfor asp-for="Product.ProductionYear" v-model-name="result.product.productionYear" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></otextboxfor>
 			</div>
 		</div>
-		<hr />
+		<hr/>
 		<h5>Product Activity</h5>
-		<br />
+		<br/>
 		<div class="row product_activities">
 			<div class="col-6">
 				<odropdownfor v-model-name="result.productActivityForJson.ActivityTypeId" v-get-text="true" asp-for="@Model.ProductActivityForJson.ActivityTypeId" asp-items="@Model.ActivityTypes" input-css="form-control col-8" has-parent="true" parent-css="form-group row" has-label="true" label-css="control-label col-4" required-css="text-red"></odropdownfor>
@@ -43,13 +43,14 @@
 		<p>
 			<button v-on:click.prevent="handleAdd" id="add" class="btn btn-primary pull-right">Add Product Detail</button>
 		</p>
-		<br /><br />
+		<br /><br/>
 		<vue-list v-bind:data="result.productActivities" title="Product Activity Details" v-bind:headers="result.headers" v-on:editRow="handleEdit" v-on:deleteRow="handleDelete"></vue-list>
 	</form>
 </div>
 
 @section scripts {
 	<script type="text/javascript">
+		console.log("form");
 		var selected = 0, activity_list = {}, selectedIds = [], modelData = @Json.Serialize(Model);
 	</script>
 	<script src="~/js/component/subListComponent.js"></script>

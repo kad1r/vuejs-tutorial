@@ -33,3 +33,7 @@ D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.As
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Common.pdb
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Html.Abstractions.xml
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Razor.xml
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.xml

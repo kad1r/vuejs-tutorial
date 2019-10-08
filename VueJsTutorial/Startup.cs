@@ -1,4 +1,6 @@
-﻿using Data.UnitOfWork;
+﻿using Common.Filters;
+using Data.Services;
+using Data.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -7,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using Model.Models;
 using System.IO;
 
 namespace VueJsTutorial
@@ -34,7 +37,12 @@ namespace VueJsTutorial
 
 			services.AddDbContext<Model.Models.AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+			//services.AddScoped<ProductService>();
+			services.AddTransient<Statistics>();
+			services.AddMvc(options =>
+			{
+				options.Filters.AddService<Statistics>();
+			}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

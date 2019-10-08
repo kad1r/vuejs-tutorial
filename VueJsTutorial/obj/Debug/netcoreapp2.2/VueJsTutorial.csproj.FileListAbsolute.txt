@@ -44,3 +44,5 @@ D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Vue
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTutorial.pdb
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\Component\SubListComponent.g.cshtml.cs
 D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\bin\Debug\netcoreapp2.2\appsettings.json
+D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuComponent\Default.g.cshtml.cs
+D:\Development\Tutorials\VueJsTutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ToolbarComponent\Default.g.cshtml.cs

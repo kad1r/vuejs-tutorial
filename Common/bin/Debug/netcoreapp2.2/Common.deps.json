@@ -14,6 +14,7 @@
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0.0",
           "Microsoft.AspNetCore.Razor": "2.2.0.0"
         },
@@ -211,6 +212,14 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Mvc.Core/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.Core.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Mvc.ViewFeatures/2.2.0.0": {
         "runtime": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
@@ -367,6 +376,11 @@
       "sha512": ""
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.Core/2.2.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

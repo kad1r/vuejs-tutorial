@@ -771,7 +771,7 @@
           "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
-      "System.Linq.Dynamic.Core/1.0.18": {
+      "System.Linq.Dynamic.Core/1.0.19": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
@@ -1118,7 +1118,7 @@
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.DynamicLinq": "1.0.18",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
-          "System.Linq.Dynamic.Core": "1.0.18"
+          "System.Linq.Dynamic.Core": "1.0.19"
         },
         "compile": {
           "bin/placeholder/Model.dll": {}
@@ -2746,10 +2746,10 @@
         "system.linq.nuspec"
       ]
     },
-    "System.Linq.Dynamic.Core/1.0.18": {
-      "sha512": "VonVK0xHQLzm+H6n5TE6wDwoCrVMuTBMdGQrXDfIAmf/klG/sJUai3bkMTlTgtqArB1NYEdWxUVqpPFnMZwVog==",
+    "System.Linq.Dynamic.Core/1.0.19": {
+      "sha512": "GFYslLz/1ZZ0+gbqYED2zlD0H95BIK4hOpIcEEEfTDDXAcKE5vpXQQseOGduNVjcJZOF3Wx+4npa2EjdFpuDgA==",
       "type": "package",
-      "path": "system.linq.dynamic.core/1.0.18",
+      "path": "system.linq.dynamic.core/1.0.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2778,7 +2778,7 @@
         "lib/uap10.0/System.Linq.Dynamic.Core.pdb",
         "lib/uap10.0/System.Linq.Dynamic.Core.pri",
         "lib/uap10.0/System.Linq.Dynamic.Core.xml",
-        "system.linq.dynamic.core.1.0.18.nupkg.sha512",
+        "system.linq.dynamic.core.1.0.19.nupkg.sha512",
         "system.linq.dynamic.core.nuspec"
       ]
     },
@@ -3983,7 +3983,7 @@
       "Microsoft.EntityFrameworkCore.DynamicLinq >= 1.0.18",
       "Microsoft.NETCore.App >= 2.2.0",
       "Model >= 1.0.0",
-      "System.Linq.Dynamic.Core >= 1.0.18"
+      "System.Linq.Dynamic.Core >= 1.0.19"
     ]
   },
   "packageFolders": {
@@ -4051,7 +4051,7 @@
           },
           "System.Linq.Dynamic.Core": {
             "target": "Package",
-            "version": "[1.0.18, )"
+            "version": "[1.0.19, )"
           }
         },
         "imports": [
