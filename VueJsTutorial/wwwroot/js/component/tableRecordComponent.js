@@ -53,7 +53,8 @@ Vue.component("otable", {
 			this.handleSearch(searchValues);
 		},
 		handleFilter: function (event) {
-
+			debugger;
+			this.headers[1].filterRule = "contains";
 		},
 		handleSearch: function (searchValues) {
 			var self = this;
