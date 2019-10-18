@@ -19,11 +19,11 @@
 <body>
 	@await Component.InvokeAsync("MenuComponent")
 	<div class="toolbar">
-		<div class="container">
+		<div class="col">
 			@await Component.InvokeAsync("ToolbarComponent")
 		</div>
 	</div>
-	<div id="vue-app" class="container">
+	<div id="vue-app" class="col">
 		<partial name="_CookieConsentPartial" />
 		<main role="main" class="pb-3">
 			@RenderBody()
@@ -55,12 +55,10 @@
 	<script src="~/release/library-bundle.js" asp-append-version="true"></script>
 	<script src="~/release/vue-bundle.js" asp-append-version="true"></script>
 	<script src="~/js/declarations.js" asp-append-version="true"></script>
-	<script src="~/js/events.js" asp-append-version="true"></script>
 	<script src="~/js/vuehelpers.js" asp-append-version="true"></script>
-	<script src="~/js/ajaxHelper.js" asp-append-version="true"></script>
-	<script src="~/js/helper.js" asp-append-version="true"></script>
 	<script src="~/js/toolbar.js" asp-append-version="true"></script>
-	<script src="~/release/site.js" asp-append-version="true"></script>
 	@RenderSection("Scripts", required: false)
+	<script src="~/release/site.js" asp-append-version="true"></script>
+	<script src="~/js/events.js" asp-append-version="true"></script>
 </body>
 </html>

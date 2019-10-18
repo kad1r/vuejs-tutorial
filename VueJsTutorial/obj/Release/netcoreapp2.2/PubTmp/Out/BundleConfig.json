@@ -1,0 +1,56 @@
+[
+	{
+		"outputFileName": "wwwroot/release/site.css",
+		"inputFiles": [
+			"wwwroot/lib/bootstrap/css/bootstrap.css",
+			"wwwroot/lib/noty/noty.css",
+			"wwwroot/lib/flatpickr/flatpickr.css",
+			"wwwroot/lib/flatpickr/ie.css",
+			"wwwroot/css/site.css"
+		],
+		"minify": {
+			"enabled": true,
+			"renameLocals": true
+		}
+	},
+	{
+		"outputFileName": "wwwroot/release/library-bundle.js",
+		"inputFiles": [
+			"wwwroot/lib/axios/axios.js",
+			"wwwroot/lib/flatpickr/flatpickr.js",
+			"wwwroot/lib/lodash/lodash.js",
+			"wwwroot/lib/noty/noty.js"
+		],
+		"minify": {
+			"enabled": false,
+			"renameLocals": true
+		}
+	},
+	{
+		"outputFileName": "wwwroot/release/vue-bundle.js",
+		"inputFiles": [
+			"wwwroot/lib/vuejs/vue.js",
+			//"wwwroot/lib/vuelidate-error-extractor/dist/vuelidate-error-extractor.js",
+			//"wwwroot/lib/vuelidate/dist/validators.min.js",
+			//"wwwroot/lib/vuelidate/dist/vuelidate.min.js"
+
+		],
+		"minify": {
+			"enabled": false,
+			"renameLocals": true
+		}
+	},
+	{
+		"outputFileName": "wwwroot/release/site.js",
+		"inputFiles": [
+			"wwwroot/js/localstorage.js",
+			"wwwroot/js/toolbar.js",
+			"wwwroot/js/site.js",
+			"wwwroot/js/heatmap.js"
+		],
+		"minify": {
+			"enabled": true,
+			"renameLocals": true
+		}
+	}
+]

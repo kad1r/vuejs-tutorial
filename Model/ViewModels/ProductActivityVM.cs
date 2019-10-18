@@ -9,6 +9,7 @@ namespace Model.ViewModels
 {
 	public class ProductActivityVM : BaseVM
 	{
+		public IList<ProductActivity> List { get; set; }
 		public Product Product { get; set; } = new Product();
 		public ProductActivityForJson ProductActivityForJson { get; set; } = new ProductActivityForJson();
 		public IList<Product> Products { get; set; }

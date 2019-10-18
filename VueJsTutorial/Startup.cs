@@ -1,6 +1,7 @@
 ﻿using Common.Filters;
 using Data.Services;
 using Data.UnitOfWork;
+using Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Logging;
 using Model.Models;
 using System.IO;
 
@@ -35,7 +37,7 @@ namespace VueJsTutorial
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 
-			services.AddDbContext<Model.Models.AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
+			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			//services.AddScoped<ProductService>();
 			services.AddTransient<Statistics>();

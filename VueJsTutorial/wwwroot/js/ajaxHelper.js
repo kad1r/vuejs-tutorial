@@ -37,14 +37,14 @@ function $call(url, method, async, responseType, callbackFuncName) {
 	};
 
 	xhr.onreadystatechange = function () {
-		/* 
+		/*
 		UNSENT = 0; // initial state
 		OPENED = 1; // open called
 		HEADERS_RECEIVED = 2; // response headers received
 		LOADING = 3; // response is loading (a data packed is received)
 		DONE = 4; // request complete
 		*/
-		
+
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			window[callbackFuncName](xhr.response);
 		}
@@ -63,8 +63,8 @@ function $call(url, method, async, responseType, callbackFuncName) {
 	};
 }
 
-async function $fetch(url) {
-	fetch(url)
-		.then(response => { return response.json(); })
-		.catch((e) => { });
-}
+//async function $fetch(url) {
+//	fetch(url)
+//		.then(response => { return response.json(); })
+//		.catch((e) => { });
+//}

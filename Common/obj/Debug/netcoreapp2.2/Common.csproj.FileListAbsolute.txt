@@ -8,7 +8,6 @@ D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Razor.xml
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.csprojAssemblyReference.cache
-D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.csproj.CoreCompileInputs.cache
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.AssemblyInfoInputs.cache
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.AssemblyInfo.cs
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.csproj.CopyComplete

@@ -5,7 +5,6 @@ D:\Development\Tutorials\VueJsTutorial\Model\bin\Debug\netcoreapp2.2\Model.pdb
 D:\Development\Tutorials\VueJsTutorial\Model\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Development\Tutorials\VueJsTutorial\Model\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
 D:\Development\Tutorials\VueJsTutorial\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
-D:\Development\Tutorials\VueJsTutorial\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
 D:\Development\Tutorials\VueJsTutorial\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
 D:\Development\Tutorials\VueJsTutorial\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 D:\Development\Tutorials\VueJsTutorial\Model\obj\Debug\netcoreapp2.2\Model.csproj.CopyComplete

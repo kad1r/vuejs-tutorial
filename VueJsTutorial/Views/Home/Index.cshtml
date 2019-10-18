@@ -4,37 +4,50 @@
 	ViewData["Title"] = "Home Page";
 }
 
-<div>
-	{{user.email}}-{{user.age}}
+<div v-if="typeof result.model !== 'undefined'">
+	<otable ref="otable" title="List of Software Developers" v-bind:list="result.model" v-bind:headers="result.headers" v-bind:header-filters="result.tableFilters"></otable>
 </div>
-<br />
-<br />
-<h1>List</h1>
-<div id="list-records"></div>
 
-@section scripts {
-	<script>
-		var app = new Vue({
-			el: '#vue-app',
-			data: @Json.Serialize(Model)
-		});
+@section scripts{
+	<script type="text/javascript">
+		var localUrl = "https://localhost:44328";
 
-		var list = new Vue({
-			el: '#list-records',
-			data: {
-				result: []
-			},
-			mounted() {
-				$get(this, "@Url.Action("getdata", "home")");
-			},
-			template: `@await Html.PartialAsync("List", Model)`,
-			methods: {
-				addNewUser: function () {
-					this.result.list.push({
-						email: 'new email address', dob: 'date of birth', age: 24
-					});
-				}
-			}
-		});
+		/*
+var searchInputs = document.getElementsByClassName("search-input"),
+sortElements = document.getElementsByClassName("fa-filter");
+
+Array.from(searchInputs).forEach(function (element) {
+element.addEventListener("keypress", search);
+});
+
+Array.from(sortElements).forEach(function (element) {
+element.addEventListener("click", click);
+});
+
+function search(event) {
+//TODO: get all search parameters and generate search array
+console.log("keypress: " + event.keyCode);
+
+if (event.keyCode == 13) {
+console.log(event);
+}
+}
+
+function click(event) {
+var clickedElement = event.target;
+
+if (typeof clickedElement !== "undefined" && clickedElement != null) {
+var column = clickedElement.attributes["data-column"].value,
+searchInput = document.querySelector(".search-input[data-column='" + column + "']");
+
+if (typeof searchInput !== "undefined" && searchInput != null) {
+clickedElement.parentNode.parentNode.previousElementSibling.classList.remove("hide");
+searchInput.focus();
+}
+}
+}
+*/
 	</script>
+	<script src="~/js/component/tableRecordComponent.js"></script>
+	<script src="~/js/view/indexpage/tableRecords.js"></script>
 }

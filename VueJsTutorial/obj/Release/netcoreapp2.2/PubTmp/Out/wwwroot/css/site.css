@@ -5,7 +5,7 @@ a.navbar-brand { white-space: normal; text-align: center; word-break: break-all;
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html { font-size: 14px !important; font-family: 'Roboto', sans-serif; }
+html { font-size: 14px !important; font-family: 'Roboto', sans-serif; color: #333; }
 
 @media (min-width: 768px) {
 	html { font-size: 16px; }
@@ -33,6 +33,10 @@ body { /* Margin bottom by footer height */ margin-bottom: 60px; }
 .requiredField { border-left: solid 4px #0062cc; }
 .requiredFieldError { border: solid 1px #dc3545; border-left: solid 4px #dc3545; }
 
+table.sub_list thead a { padding: 0 10px 0 0; text-decoration: none; color: #007bff; }
+	table.sub_list thead a:hover { text-decoration: none; color: #006add; }
+
+/* colors */
 .primary-color { color: #007bff; }
 .secondary-color { color: #6c757d; }
 .success-color { color: #28a745; }
@@ -43,3 +47,13 @@ body { /* Margin bottom by footer height */ margin-bottom: 60px; }
 .dark-color { color: #353535; }
 .white-color { color: #fff; }
 .transparent { color: transparent !important; }
+
+/* table css */
+table thead tr { font-weight: bold; }
+
+/* navigation */
+.navigation > .toolbar_icons { margin: 0 !important; }
+	.navigation > .toolbar_icons li a { min-width: 40px; text-align: center; }
+	.navigation > .toolbar_icons .page-link { color: #333; }
+
+.toolbar { background-color: #efefef; padding: 10px 0; margin-bottom: 10px; }

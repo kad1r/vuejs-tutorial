@@ -4,14 +4,46 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using VueJsTutorial.Models;
+using Logging;
+using Model.Models;
+using System.Linq.Expressions;
+using Data.UnitOfWork;
+using System.Linq;
+using System.Linq.Dynamic.Core;
+using Microsoft.EntityFrameworkCore;
 
 namespace VueJsTutorial.Controllers
 {
 	public class HomeController : Controller
 	{
+		private readonly IUnitOfWork _uow;
+		private readonly Logger logger;
+
+		public HomeController(IUnitOfWork uow)
+		{
+			_uow = uow;
+		}
+
 		//[AjaxOnly]
 		public IActionResult Index()
 		{
+			/*
+			Expression<Func<Menu, bool>> exp = x => x.IsActive == true;
+
+			if (true)
+			{
+				Expression<Func<Menu, bool>> exp1 = c => c.MenuAuthorizations.Any(z => z.RoleId == 1);
+
+				var invokedExpression = Expression.Invoke(exp1, exp.Parameters.Cast<Expression>());
+				exp = Expression.Lambda<Func<Menu, bool>>(Expression.AndAlso(exp.Body, invokedExpression), exp.Parameters);
+			}
+
+			var products = _uow.Repository<Menu>()
+				.Query(exp)
+				.Include(x => x.MenuAuthorizations)
+				.ToList();
+			*/
+
 			var vm = new UserVM();
 			var list = new List<User>();
 			var user = new User

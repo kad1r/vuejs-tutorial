@@ -4,8 +4,8 @@
  * For these kind of dtos we don't need to specify model
  * */
 
-var vm = new Vue({
-	el: "#formApp",
+window.vm = new Vue({
+	el: "#vue-app",
 	name: "productactivityform",
 	data: {
 		result: []

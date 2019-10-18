@@ -1,0 +1,284 @@
+﻿{
+	"model": [
+		{
+			"Id": "1",
+			"FullName": "Kadir Avcı",
+			"Email": "kadir.avci@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
+		},
+		{
+			"Id": "2",
+			"FullName": "Cem Elma",
+			"Email": "cem.elma@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "22.05.2014",
+			"IsActive": true
+		},
+		{
+			"Id": "3",
+			"FullName": "Selçuk Akşar",
+			"Email": "selcuk.aksar@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "01.08.2017",
+			"IsActive": true
+		},
+		{
+			"Id": "4",
+			"FullName": "Gökhan Ergun",
+			"Email": "gokhan.ergun@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "01.03.2017",
+			"IsActive": true
+		},
+		{
+			"Id": "5",
+			"FullName": "Ali Canölmez",
+			"Email": "ali.canolmez@cts.com.tr",
+			"Job": "Manager",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "19.12.2003",
+			"IsActive": false
+		},
+		{
+			"Id": "6",
+			"FullName": "Serkan Tanfener",
+			"Email": "serkan.tanfener@cts.com.tr",
+			"Job": "Manager",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "19.12.2003",
+			"IsActive": false
+		},
+		{
+			"Id": "7",
+			"FullName": "Anıl Buldu",
+			"Email": "anil.buldu@asay.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "Asay",
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
+		},
+		{
+			"Id": "8",
+			"FullName": "Ozan Ekici",
+			"Email": "ozan.ekici@deptagency.com",
+			"Job": "Back End Developer",
+			"Country": "Germany",
+			"Company": "Dept Agency",
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
+		},
+		{
+			"Id": "9",
+			"FullName": "Suat Erken",
+			"Email": "suat.erken@deptagency.com",
+			"Job": "Back End Developer",
+			"Country": "Holland",
+			"Company": "Dept Agency",
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
+		},
+		{
+			"Id": "10",
+			"FullName": "Ahmad Merhi",
+			"Email": "ahmad.merhi@osfglobal.com",
+			"Job": "Girly Front End Developer",
+			"Country": "Canada",
+			"Company": "OSF Global",
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
+		},
+		{
+			"Id": "11",
+			"FullName": "Erfan Gholampour",
+			"Email": "erfan.gholampour@osfglobal.com",
+			"Job": "Back End Developer",
+			"Country": "Iran",
+			"Company": "OSF Global",
+			"JobStartDate": "01.10.2018",
+			"IsActive": false
+		},
+		{
+			"Id": "12",
+			"FullName": "Gülşah Yetkin",
+			"Email": "gulsah.yetkin@cts.com.tr",
+			"Job": "Teacher",
+			"Country": "Turkey",
+			"Company": "60. Yıl",
+			"JobStartDate": "23.04.2008",
+			"IsActive": true
+		},
+		{
+			"Id": "13",
+			"FullName": "İbrahim Özyalçın",
+			"Email": "ibrahim.ozyalcin@cts.com.tr",
+			"Job": "Project Manager",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
+		},
+		{
+			"Id": "14",
+			"FullName": "Çetin Tozkoparan",
+			"Email": "cetin.tozkoparan@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "18.06.2013",
+			"IsActive": true
+		},
+		{
+			"Id": "15",
+			"FullName": "Jo Pierre Lerm",
+			"Email": "jopierrelerm@xmail.com",
+			"Job": "Ceo",
+			"Country": "South Africa",
+			"Company": "Kastim",
+			"JobStartDate": "08.02.2013",
+			"IsActive": false
+		},
+		{
+			"Id": "16",
+			"FullName": "Çetin Özgür Baltacı",
+			"Email": "cetinozgurbaltaci@xmail.com",
+			"Job": "Mechanical Engineer",
+			"Country": "Turkey",
+			"Company": "Inveno",
+			"JobStartDate": "01.10.2018",
+			"IsActive": false
+		},
+		{
+			"Id": "17",
+			"FullName": "Damla Demir",
+			"Email": "damla.demir@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "01.09.2019",
+			"IsActive": true
+		},
+		{
+			"Id": "18",
+			"FullName": "Merve Yapnaz",
+			"Email": "merve.yapnaz@cts.com.tr",
+			"Job": "Full Stack Developer",
+			"Country": "Turkey",
+			"Company": "CTS",
+			"JobStartDate": "01.09.2019",
+			"IsActive": true
+		},
+		{
+			"Id": "19",
+			"FullName": "Baran Ozan",
+			"Email": "baran.ozan@osfglobal.com",
+			"Job": "Front End Developer",
+			"Country": "Turkey",
+			"Company": "OSF Global",
+			"JobStartDate": "17.11.2017",
+			"IsActive": false
+		}
+	],
+	"headers": [
+		{
+			"title": "Id",
+			"column": "Id",
+			"type": "int",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": false,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Full Name",
+			"column": "FullName",
+			"type": "string",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Email",
+			"column": "Email",
+			"type": "string",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Job",
+			"column": "Job",
+			"type": "string",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Country",
+			"column": "Country",
+			"type": "string",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Company",
+			"column": "Company",
+			"type": "string",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Started Job At",
+			"column": "JobStartDate",
+			"type": "date",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Is Active?",
+			"column": "IsActive",
+			"type": "enum-yesno",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
+		}
+	]
+}

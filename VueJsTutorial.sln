@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{6DD7517A-5589-4DD0-8BC6-B36A60D0A111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{DAEFC4F9-7A3C-488E-B38D-414816B34410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{DAEFC4F9-7A3C-488E-B38D-414816B34410}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "Logging\Logging.csproj", "{562DC088-D53E-4CBE-99BB-6BFE79438567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorTable", "RazorTable\RazorTable.csproj", "{F3836D6F-CCC1-4383-A334-ABF9C74AA1E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{DAEFC4F9-7A3C-488E-B38D-414816B34410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEFC4F9-7A3C-488E-B38D-414816B34410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEFC4F9-7A3C-488E-B38D-414816B34410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562DC088-D53E-4CBE-99BB-6BFE79438567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562DC088-D53E-4CBE-99BB-6BFE79438567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562DC088-D53E-4CBE-99BB-6BFE79438567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562DC088-D53E-4CBE-99BB-6BFE79438567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3836D6F-CCC1-4383-A334-ABF9C74AA1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3836D6F-CCC1-4383-A334-ABF9C74AA1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3836D6F-CCC1-4383-A334-ABF9C74AA1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3836D6F-CCC1-4383-A334-ABF9C74AA1E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

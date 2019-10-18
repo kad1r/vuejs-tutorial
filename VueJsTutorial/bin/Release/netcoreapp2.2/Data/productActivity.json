@@ -1,0 +1,46 @@
+{
+	"model": [
+		{
+			"ActivityType": "Activity 1",
+			"ActivityTypeId": "1",
+			"WareHouse": "WareHouse 2",
+			"WareHouseId": "2",
+			"InvoiceNumber": "723413123",
+			"ActivityDate": "2019-09-12",
+			"Status": 1,
+			"Show": true,
+			"RowId": "1",
+			"Id": "1"
+		},
+		{
+			"ActivityType": "Activity 2",
+			"ActivityTypeId": "2",
+			"WareHouse": "WareHouse 2",
+			"WareHouseId": "2",
+			"InvoiceNumber": "4347615483",
+			"ActivityDate": "2019-09-10",
+			"Status": 1,
+			"Show": false,
+			"RowId": "2",
+			"Id": "2"
+		},
+		{
+			"ActivityType": "Activity 3",
+			"ActivityTypeId": "3",
+			"WareHouse": "WareHouse 2",
+			"WareHouseId": "2",
+			"InvoiceNumber": "1283644879",
+			"ActivityDate": "2019-09-13",
+			"Status": 1,
+			"Show": true,
+			"RowId": "3",
+			"Id": "3"
+		}
+	],
+	"headers": [
+		"ActivityType",
+		"WareHouse",
+		"InvoiceNumber",
+		"ActivityDate"
+	]
+}

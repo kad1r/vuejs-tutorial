@@ -1,5 +1,4 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿:root { --table-header-mb: 20 px; }
 
 a.navbar-brand { white-space: normal; text-align: center; word-break: break-all; }
 
@@ -47,13 +46,28 @@ table.sub_list thead a { padding: 0 10px 0 0; text-decoration: none; color: #007
 .dark-color { color: #353535; }
 .white-color { color: #fff; }
 .transparent { color: transparent !important; }
+.tbl-grey-bg { background-color: #ececec; color: #666; }
 
 /* table css */
 table thead tr { font-weight: bold; }
+/*table.table-records thead td ::before { text-align: left !important; }*/
+table.table-records thead td .fa { float: right; margin-left: 5px; margin-top: 5px; cursor: pointer; }
+/*.table-title { margin-bottom: var(--table-header-mb); }*/
+.table-title { margin-bottom: 20px; }
+
+.grid-filter-dropdown { position: absolute; display: inline-block; margin-top: 25px; right: 0; }
+.dropdown-content { border-radius: 2px; display: block; position: static; right: 0; background-color: #fff; border: solid 1px #cecece; width: auto; min-width: 165px; overflow: visible; list-style: none; padding: 0 10px; }
+	.dropdown-content li { color: black; padding: 4px 8px; text-decoration: none; display: block; }
+.grid-filter-dropdown li:hover { background-color: #efefef; }
 
 /* navigation */
 .navigation > .toolbar_icons { margin: 0 !important; }
 	.navigation > .toolbar_icons li a { min-width: 40px; text-align: center; }
 	.navigation > .toolbar_icons .page-link { color: #333; }
 
-.toolbar { background-color: #efefef; padding: 10px 0; margin-bottom: 10px; }
+.toolbar { background-color: #efefef; padding: 10px 0; margin-bottom: 10px; font-size: 15px !important; }
+
+.hide { display: none; }
+.position-relative { position: relative; }
+
+.mb15 { margin-bottom: 15px; }

@@ -19,7 +19,6 @@ D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Model.dll
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Model.pdb
 D:\Development\Tutorials\VueJsTutorial\Data\bin\Debug\netcoreapp2.2\Model.dll.config
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.csprojAssemblyReference.cache
-D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfoInputs.cache
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
 D:\Development\Tutorials\VueJsTutorial\Data\obj\Debug\netcoreapp2.2\Data.csproj.CopyComplete
