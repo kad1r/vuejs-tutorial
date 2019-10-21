@@ -7,7 +7,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
 		},
 		{
 			"Id": "2",
@@ -16,7 +17,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "22.05.2014"
+			"JobStartDate": "22.05.2014",
+			"IsActive": true
 		},
 		{
 			"Id": "3",
@@ -25,7 +27,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "01.08.2017"
+			"JobStartDate": "01.08.2017",
+			"IsActive": true
 		},
 		{
 			"Id": "4",
@@ -34,7 +37,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "01.03.2017"
+			"JobStartDate": "01.03.2017",
+			"IsActive": true
 		},
 		{
 			"Id": "5",
@@ -43,7 +47,8 @@
 			"Job": "Manager",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "19.12.2003"
+			"JobStartDate": "19.12.2003",
+			"IsActive": false
 		},
 		{
 			"Id": "6",
@@ -52,16 +57,18 @@
 			"Job": "Manager",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "19.12.2003"
+			"JobStartDate": "19.12.2003",
+			"IsActive": false
 		},
 		{
 			"Id": "7",
 			"FullName": "Anıl Buldu",
 			"Email": "anil.buldu@asay.com.tr",
-			"Job": "Full Stack Developer",
+			"Job": "Iot Platform Developer",
 			"Country": "Turkey",
 			"Company": "Asay",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
 		},
 		{
 			"Id": "8",
@@ -70,7 +77,8 @@
 			"Job": "Back End Developer",
 			"Country": "Germany",
 			"Company": "Dept Agency",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
 		},
 		{
 			"Id": "9",
@@ -79,16 +87,18 @@
 			"Job": "Back End Developer",
 			"Country": "Holland",
 			"Company": "Dept Agency",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
 		},
 		{
 			"Id": "10",
 			"FullName": "Ahmad Merhi",
 			"Email": "ahmad.merhi@osfglobal.com",
-			"Job": "Girly Front End Developer",
+			"Job": "Front End Developer",
 			"Country": "Canada",
 			"Company": "OSF Global",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
 		},
 		{
 			"Id": "11",
@@ -97,7 +107,8 @@
 			"Job": "Back End Developer",
 			"Country": "Iran",
 			"Company": "OSF Global",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": false
 		},
 		{
 			"Id": "12",
@@ -106,7 +117,8 @@
 			"Job": "Teacher",
 			"Country": "Turkey",
 			"Company": "60. Yıl",
-			"JobStartDate": "23.04.2008"
+			"JobStartDate": "23.04.2008",
+			"IsActive": true
 		},
 		{
 			"Id": "13",
@@ -115,7 +127,8 @@
 			"Job": "Project Manager",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": true
 		},
 		{
 			"Id": "14",
@@ -124,7 +137,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "18.06.2013"
+			"JobStartDate": "18.06.2013",
+			"IsActive": true
 		},
 		{
 			"Id": "15",
@@ -133,7 +147,8 @@
 			"Job": "Ceo",
 			"Country": "South Africa",
 			"Company": "Kastim",
-			"JobStartDate": "08.02.2013"
+			"JobStartDate": "08.02.2013",
+			"IsActive": false
 		},
 		{
 			"Id": "16",
@@ -142,7 +157,8 @@
 			"Job": "Mechanical Engineer",
 			"Country": "Turkey",
 			"Company": "Inveno",
-			"JobStartDate": "01.10.2018"
+			"JobStartDate": "01.10.2018",
+			"IsActive": false
 		},
 		{
 			"Id": "17",
@@ -151,7 +167,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "01.09.2019"
+			"JobStartDate": "01.09.2019",
+			"IsActive": true
 		},
 		{
 			"Id": "18",
@@ -160,7 +177,8 @@
 			"Job": "Full Stack Developer",
 			"Country": "Turkey",
 			"Company": "CTS",
-			"JobStartDate": "01.09.2019"
+			"JobStartDate": "01.09.2019",
+			"IsActive": true
 		},
 		{
 			"Id": "19",
@@ -169,7 +187,8 @@
 			"Job": "Front End Developer",
 			"Country": "Turkey",
 			"Company": "OSF Global",
-			"JobStartDate": "17.11.2017"
+			"JobStartDate": "17.11.2017",
+			"IsActive": false
 		}
 	],
 	"headers": [
@@ -181,7 +200,8 @@
 			"url": "/data/tableComponent.json",
 			"show": false,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
 		},
 		{
 			"title": "Full Name",
@@ -191,7 +211,8 @@
 			"url": "/data/tableComponent.json",
 			"show": true,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
 		},
 		{
 			"title": "Email",
@@ -201,7 +222,8 @@
 			"url": "/data/tableComponent.json",
 			"show": true,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
 		},
 		{
 			"title": "Job",
@@ -211,7 +233,8 @@
 			"url": "/data/tableComponent.json",
 			"show": true,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
 		},
 		{
 			"title": "Country",
@@ -221,7 +244,8 @@
 			"url": "/data/tableComponent.json",
 			"show": true,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
 		},
 		{
 			"title": "Company",
@@ -231,7 +255,8 @@
 			"url": "/data/tableComponent.json",
 			"show": true,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
 		},
 		{
 			"title": "Started Job At",
@@ -241,7 +266,19 @@
 			"url": "/data/tableComponent.json",
 			"show": true,
 			"value": "",
-			"orderby": ""
+			"orderby": "",
+			"filterRule": ""
+		},
+		{
+			"title": "Is Active?",
+			"column": "IsActive",
+			"type": "enum-yesno",
+			"inputtype": "text",
+			"url": "/data/tableComponent.json",
+			"show": true,
+			"value": "",
+			"orderby": "",
+			"filterRule": ""
 		}
 	]
 }

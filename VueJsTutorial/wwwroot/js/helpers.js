@@ -4,24 +4,6 @@ function get(elementId) {
 	return document.getElementById(elementId);
 }
 
-Array.prototype.insert = function (value) {
-	var index = this.indexOf(value);
-
-	if (index > -1) {
-		this.splice(index, 1);
-	} else {
-		this.push(value);
-	}
-}
-
-Array.prototype.empty = function () {
-	this.length = 0;
-}
-
-Array.prototype.findbyid = function (id) {
-	return this.find(x => x.RowId == id);
-}
-
 function unCheck(area) {
 	var checkboxes = document.querySelectorAll(area + " input[type=checkbox]");
 
@@ -157,3 +139,16 @@ function checkSelectedRows(rows) {
 	}
 }
 
+function sortByColumn(property, sortway) {
+	var sortOrder = 1;
+
+	if (sortway === "desc") {
+		sortOrder = -1;
+	}
+
+	return function (a, b) {
+		var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+
+		return result * sortOrder;
+	}
+}

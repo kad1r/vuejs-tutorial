@@ -49,25 +49,96 @@ Vue.component("otable", {
 		},
 		generateSearchKeys: function (searchValues) {
 			searchValues = searchValues.filter(x => { return x.value != "" });
-			console.log(searchValues);
-			this.handleSearch(searchValues);
+			this.doSearch(searchValues);
 		},
 		handleFilter: function (event) {
-			debugger;
-			this.headers[1].filterRule = "contains";
+			var filterRule = event.target.textContent,
+				closestFilter = event.target.closest("td.position-relative").findChild("i.fa-filter"),
+				dataFilter = closestFilter.attributes["data-column"].value,
+				filterHeader = this.headers.filter(x => { return x.column == dataFilter });
+
+			if (!isNullOrUndefined(filterHeader)) {
+				filterHeader[0].filterRule = filterRule;
+				document.body.click();
+				this.generateSearchKeys(this.headers);
+			}
 		},
-		handleSearch: function (searchValues) {
+		doSearch: function (searchValues) {
 			var self = this;
 
-			fetch(localUrl + "/data/tablecomponent.json")
-				.then(res => res.json())
-				.then(function (response) {
-					for (searchValue of searchValues) {
-						response.model = response.model.filter(x => { return x[searchValue.column].indexOf(searchValue.value) > -1 });
-					}
+			if (searchValues.length > 0) {
+				fetch(localUrl + "/data/tablecomponent.json")
+					.then(res => res.json())
+					.then(function (response) {
+						for (searchValue of searchValues) {
+							response.model = response.model.filter(x => {
+								switch (searchValue.filterRule) {
+									case "Begins with": {
+										return x[searchValue.column].startsWith(searchValue.value)
+									}
+									case "Ends with": {
+										return x[searchValue.column].endsWith(searchValue.value)
+									}
+									case "Contains": {
+										return x[searchValue.column].indexOf(searchValue.value) > -1
+									}
+									case "Doesn't contain": {
+										return x[searchValue.column].indexOf(searchValue.value) === -1
+									}
+									case "Equals": {
+										return x[searchValue.column] === searchValue.value
+									}
+									case "Not equal": {
+										return x[searchValue.column] !== searchValue.value
+									}
+									default: {
+										return x[searchValue.column].indexOf(searchValue.value) > -1
+									}
+								}
+							});
+						}
 
-					self.compList = response.model;
-				});
+						if (response.model.length > 0) {
+							self.compList = response.model;
+						} else {
+							self.compList = [];
+						}
+					});
+			}
+		},
+		handleSorting: function (event) {
+			var element = event.target,
+				dataFilter = element.attributes["data-column"].value,
+				filterHeader = this.headers.filter(x => { return x.column == dataFilter }),
+				sortValues = [];
+
+			if (!isNullOrUndefined(filterHeader)) {
+				if (filterHeader[0].orderby === "" || filterHeader[0].orderby === "desc") {
+					filterHeader[0].orderby = "asc";
+				} else if (filterHeader[0].orderby === "asc") {
+					filterHeader[0].orderby = "desc";
+				}
+			}
+
+			sortValues = filterHeader.filter(x => { return x.orderby != "" });
+			this.doSort(sortValues);
+		},
+		doSort: function (sortValues) {
+			var self = this;
+
+			if (sortValues.length > 0) {
+				fetch(localUrl + "/data/tablecomponent.json")
+					.then(res => res.json())
+					.then(function (response) {
+						var sortValue = sortValues[sortValues.length - 1];
+
+						if (response.model.length > 0) {
+							self.compList = response.model.sort(sortByColumn(sortValue.column, sortValue.orderby));
+						} else {
+							self.compList = [];
+						}
+					});
+			}
 		},
 		getDateValue: function (event) {
 			var target = event.target,
@@ -108,7 +179,9 @@ Vue.component("otable", {
 					</tr>
 					<tr ref="searchDropDown">
 						<td v-for="header in headers" v-if="!header.show"><input type="checkbox" /></td>
-						<td class="position-relative" v-else>{{header.title}} <i class="fa fa-sort" v-on:click.prevent="handleSorting" v-bind:data-column="header.column"></i><i v-on:click.prevent="openSearchBar" class="fa fa-filter" v-bind:data-column="header.column" v-bind:data-type="header.type"></i>
+						<td class="position-relative" v-else>{{header.title}} 
+							<i v-bind:class="{'fa fa-sort' : header.orderby == '', 'fa fa-sort-asc' : header.orderby == 'asc', 'fa fa-sort-desc' : header.orderby == 'desc'}" v-on:click.prevent="handleSorting" v-bind:data-column="header.column"></i>
+							<i v-on:click.prevent="openSearchBar" class="fa fa-filter" v-bind:data-column="header.column" v-bind:data-type="header.type"></i>
 							<div class="grid-filter-dropdown hide closed">
 								<ul v-if="header.type == 'string'" class="dropdown-content">
 									<li v-for="tableFilter in headerFilters.string" v-on:click.prevent="handleFilter" v-bind:data-value="tableFilter">{{tableFilter}}</li>

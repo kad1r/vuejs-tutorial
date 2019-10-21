@@ -10,6 +10,17 @@ HTMLElement.prototype.findParent = function fn(selector) {
 	}
 }
 
+HTMLElement.prototype.findChild = function (selector) {
+	// check selector if actual element or just a selector
+	var element = this.querySelectorAll(selector);
+
+	if (element.length > 0 && element.length == 1) {
+		return element[0];
+	} else {
+		return this.querySelectorAll(selector);
+	}
+}
+
 HTMLElement.prototype.addClass = function () {
 	for (var arg of arguments) {
 		if (!this.classList.contains(arg)) {
@@ -44,12 +55,6 @@ String.prototype.turkishToLower = function () {
 	return string.toLowerCase();
 }
 
-;
-
-function get(elementId) {
-	return document.getElementById(elementId);
-}
-
 Array.prototype.insert = function (value) {
 	var index = this.indexOf(value);
 
@@ -66,6 +71,12 @@ Array.prototype.empty = function () {
 
 Array.prototype.findbyid = function (id) {
 	return this.find(x => x.RowId == id);
+}
+
+;
+
+function get(elementId) {
+	return document.getElementById(elementId);
 }
 
 function unCheck(area) {
@@ -203,6 +214,19 @@ function checkSelectedRows(rows) {
 	}
 }
 
+function sortByColumn(property, sortway) {
+	var sortOrder = 1;
+
+	if (sortway === "desc") {
+		sortOrder = -1;
+	}
+
+	return function (a, b) {
+		var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+
+		return result * sortOrder;
+	}
+}
 
 ;
 

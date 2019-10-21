@@ -11590,8 +11590,8 @@ table.table-records thead td .fa { float: right; margin-left: 5px; margin-top: 5
 .table-title { margin-bottom: 20px; }
 
 .grid-filter-dropdown { position: absolute; display: inline-block; margin-top: 25px; right: 0; }
-.dropdown-content { border-radius: 2px; display: block; position: static; right: 0; background-color: #fff; border: solid 1px #cecece; width: auto; min-width: 165px; overflow: visible; list-style: none; padding: 0 10px; }
-	.dropdown-content li { color: black; padding: 4px 8px; text-decoration: none; display: block; }
+.dropdown-content { border-radius: 2px; display: block; position: static; right: 0; background-color: #fff; border: solid 1px #cecece; width: auto; min-width: 165px; overflow: visible; list-style: none; padding: 0 10px; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12); }
+	.dropdown-content li { color: black; padding: 5px 10px; margin: 0 -10px !important; text-decoration: none; display: block; }
 .grid-filter-dropdown li:hover { background-color: #efefef; }
 
 /* navigation */
