@@ -1,8 +1,4 @@
-﻿;
-
-"use strict";
-
-window.isValid = false;
+﻿window.isValid = false;
 
 var form = document.querySelector("form"),
 	toolbarSave = get("toolbar_save"),

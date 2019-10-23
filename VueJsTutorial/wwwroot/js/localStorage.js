@@ -1,8 +1,4 @@
-﻿;
-
-"use strict";
-
-(function () {
+﻿(function () {
 	this.AppStorage = function () {
 		this.storage = window.localStorage;
 		this.clicks = [];

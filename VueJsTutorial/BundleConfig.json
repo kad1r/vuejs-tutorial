@@ -43,12 +43,14 @@
 	{
 		"outputFileName": "wwwroot/release/site.js",
 		"inputFiles": [
+			"wwwroot/js/declarations.js",
 			"wwwroot/js/prototypes.js",
 			"wwwroot/js/helpers.js",
 			"wwwroot/js/ajaxhelper.js",
 			"wwwroot/js/localstorage.js",
 			"wwwroot/js/toolbar.js",
 			"wwwroot/js/site.js",
+			"wwwroot/js/events.js",
 			"wwwroot/js/heatmap.js"
 		],
 		"minify": {

@@ -1,6 +1,4 @@
-﻿;
-
-function get(elementId) {
+﻿function get(elementId) {
 	return document.getElementById(elementId);
 }
 

@@ -1,8 +1,4 @@
-﻿;
-
-"use strict";
-
-(function () {
+﻿(function () {
 	this.Heatmap = function () {
 
 	};

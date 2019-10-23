@@ -1,4 +1,14 @@
-;
+"use strict";
+
+const DataStates = { Added: 1, Updated: 2, Deleted: 3, NoChange: 4 };
+const tableFilters = {
+	"string": ["Begins with", "Ends with", "Contains", "Doesn't contain", "Equals", "Not equal"],
+	"date": ["From", "To"]
+};
+var selectedObj = {};
+var selectedRows = [], selectedSubRows = [], searchArr = [], sortArr = [], requiredFieldsByArea = [];
+var isFormValid = false;
+var selected = 0;
 
 HTMLElement.prototype.findParent = function fn(selector) {
 	var parent = this.parentNode;
@@ -72,8 +82,6 @@ Array.prototype.empty = function () {
 Array.prototype.findbyid = function (id) {
 	return this.find(x => x.RowId == id);
 }
-
-;
 
 function get(elementId) {
 	return document.getElementById(elementId);
@@ -228,8 +236,6 @@ function sortByColumn(property, sortway) {
 	}
 }
 
-;
-
 function $get(url, ref) {
 	if (typeof ref !== "undefined") {
 		axios.get(url)
@@ -298,10 +304,6 @@ function $call(url, method, async, responseType, callbackFuncName) {
 //		.then(response => { return response.json(); })
 //		.catch((e) => { });
 //}
-
-;
-
-"use strict";
 
 (function () {
 	this.AppStorage = function () {
@@ -396,8 +398,6 @@ var appStorage = {
 
 */
 
-;
-
 var toolbar_view = document.getElementById("toolbar_view");
 var toolbar_new = document.getElementById("toolbar_new");
 var toolbar_save = document.getElementById("toolbar_save");
@@ -427,10 +427,6 @@ function editForm() {
 function deleteRecord() {
 }
 
-;
-
-"use strict";
-
 window.isValid = false;
 
 var form = document.querySelector("form"),
@@ -459,9 +455,47 @@ function pageInit() {
 	flatpickr(".date-control");
 }
 
-;
+/*
+var validationMixin = window.vuelidate.validationMixin;
+Vue.use(window.vuelidate.default);
+//Vue.use(validationMixin);
+*/
 
-"use strict";
+window.onload = function () {
+	window.tableGridFilters = document.querySelectorAll(".dropdown-content");
+
+	pageInit();
+	
+	if (!this.isNullOrUndefined(tableGridFilters)) {
+		document.addEventListener("click", closeTableGridFilters);
+	}
+}
+
+function closeTableGridFilters(event) {
+	// hide dropdown from grid tables if click to outside of the unrelated element
+	var expectedElements = document.querySelectorAll("table .fa-filter"),
+		isInSpecifiedElements = false, isInExpectedElements = false;
+
+	tableGridFilters.forEach(function (e) {
+		if (e.contains(event.target)) {
+			isInSpecifiedElements = true;
+		}
+	});
+
+	expectedElements.forEach(function (e) {
+		if (e.contains(event.target)) {
+			isInExpectedElements = true;
+		}
+	});
+
+	if (!isInSpecifiedElements && !isInExpectedElements) {
+		tableGridFilters.forEach(function (e) {
+			if (e.parentNode.classList.contains("opened")) {
+				e.parentNode.removeClass("opened").addClass("hide", "closed");
+			}
+		});
+	}
+}
 
 (function () {
 	this.Heatmap = function () {

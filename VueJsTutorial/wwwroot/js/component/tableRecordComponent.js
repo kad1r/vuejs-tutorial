@@ -52,7 +52,7 @@ Vue.component("otable", {
 			this.doSearch(searchValues);
 		},
 		handleFilter: function (event) {
-			var filterRule = event.target.textContent,
+			var filterRule = event.target.innerText,
 				closestFilter = event.target.closest("td.position-relative").findChild("i.fa-filter"),
 				dataFilter = closestFilter.attributes["data-column"].value,
 				filterHeader = this.headers.filter(x => { return x.column == dataFilter });
@@ -70,6 +70,7 @@ Vue.component("otable", {
 				fetch(localUrl + "/data/tablecomponent.json")
 					.then(res => res.json())
 					.then(function (response) {
+						debugger
 						for (searchValue of searchValues) {
 							response.model = response.model.filter(x => {
 								switch (searchValue.filterRule) {
@@ -146,7 +147,8 @@ Vue.component("otable", {
 				value = target.value,
 				column = target.attributes["data-column"].value,
 				searchInput = document.querySelector(".search-input[data-column='" + column + "']"),
-				searchValues = searchInput.value.split(":");
+				searchValues = searchInput.value.split(":"),
+				filterHeader = this.headers.filter(x => { return x.column == column });
 
 			if (searchInput) {
 				if (classList.contains("from")) {
@@ -156,6 +158,8 @@ Vue.component("otable", {
 				}
 
 				searchInput.value = searchValues[0] + (typeof searchValues[1] !== "undefined" ? " : " + searchValues[1] : "");
+				debugger;
+				filterHeader[0].filterRule = searchInput.value;
 			}
 		},
 		closeOtherDropDowns: function (dropdown) {
@@ -181,10 +185,10 @@ Vue.component("otable", {
 						<td v-for="header in headers" v-if="!header.show"><input type="checkbox" /></td>
 						<td class="position-relative" v-else>{{header.title}} 
 							<i v-bind:class="{'fa fa-sort' : header.orderby == '', 'fa fa-sort-asc' : header.orderby == 'asc', 'fa fa-sort-desc' : header.orderby == 'desc'}" v-on:click.prevent="handleSorting" v-bind:data-column="header.column"></i>
-							<i v-on:click.prevent="openSearchBar" class="fa fa-filter" v-bind:data-column="header.column" v-bind:data-type="header.type"></i>
+							<i v-on:click.prevent="openSearchBar" v-bind:class="{'primary-color' : header.filterRule != ''}" class="fa fa-filter" v-bind:data-column="header.column" v-bind:data-type="header.type"></i>
 							<div class="grid-filter-dropdown hide closed">
 								<ul v-if="header.type == 'string'" class="dropdown-content">
-									<li v-for="tableFilter in headerFilters.string" v-on:click.prevent="handleFilter" v-bind:data-value="tableFilter">{{tableFilter}}</li>
+									<li v-for="tableFilter in headerFilters.string" v-bind:class="{'primary-color' : header.filterRule == tableFilter}" v-on:click.prevent="handleFilter" v-bind:data-value="tableFilter">{{tableFilter}} <i v-if="header.filterRule == tableFilter" class="fa fa-check"></i></li>
 								</ul>
 								<ul v-if="header.type == 'date'" class="dropdown-content">
 									<li>From: <input type="text" v-on:change="getDateValue" v-bind:data-column="header.column" class="form-control date-control for-header from"></li>

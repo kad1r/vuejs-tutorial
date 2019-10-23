@@ -1,6 +1,4 @@
-﻿;
-
-var toolbar_view = document.getElementById("toolbar_view");
+﻿var toolbar_view = document.getElementById("toolbar_view");
 var toolbar_new = document.getElementById("toolbar_new");
 var toolbar_save = document.getElementById("toolbar_save");
 var toolbar_edit = document.getElementById("toolbar_edit");

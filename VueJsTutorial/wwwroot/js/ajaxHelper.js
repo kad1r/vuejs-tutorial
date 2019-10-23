@@ -1,6 +1,4 @@
-﻿;
-
-function $get(url, ref) {
+﻿function $get(url, ref) {
 	if (typeof ref !== "undefined") {
 		axios.get(url)
 			.then(response => {

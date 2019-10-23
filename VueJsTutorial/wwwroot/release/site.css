@@ -11570,7 +11570,7 @@ table.sub_list thead a { padding: 0 10px 0 0; text-decoration: none; color: #007
 	table.sub_list thead a:hover { text-decoration: none; color: #006add; }
 
 /* colors */
-.primary-color { color: #007bff; }
+.primary-color { color: #007bff !important; }
 .secondary-color { color: #6c757d; }
 .success-color { color: #28a745; }
 .danger-color { color: #dc3545; }

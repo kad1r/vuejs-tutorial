@@ -1,6 +1,4 @@
-﻿;
-
-HTMLElement.prototype.findParent = function fn(selector) {
+﻿HTMLElement.prototype.findParent = function fn(selector) {
 	var parent = this.parentNode;
 
 	if (parent && parent.tagName.toLowerCase() != selector) {

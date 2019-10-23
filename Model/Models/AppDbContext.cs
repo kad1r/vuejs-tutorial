@@ -6,6 +6,8 @@ namespace Model.Models
 	{
 		public AppDbContext()
 		{
+			ChangeTracker.LazyLoadingEnabled = false;
+			ChangeTracker.AutoDetectChangesEnabled = false;
 		}
 
 		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
