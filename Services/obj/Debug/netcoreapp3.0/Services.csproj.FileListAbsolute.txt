@@ -1,0 +1,8 @@
+D:\Development\Tutorials\VueJsTutorial\Services\bin\Debug\netcoreapp3.0\Services.deps.json
+D:\Development\Tutorials\VueJsTutorial\Services\bin\Debug\netcoreapp3.0\Services.dll
+D:\Development\Tutorials\VueJsTutorial\Services\bin\Debug\netcoreapp3.0\Services.pdb
+D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.csprojAssemblyReference.cache
+D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfoInputs.cache
+D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfo.cs
+D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.dll
+D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.pdb
