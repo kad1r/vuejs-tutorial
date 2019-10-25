@@ -1,5 +1,4 @@
-﻿using Model;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Model.ViewModels;
 
 namespace Data.Repository
 {
@@ -144,7 +142,7 @@ namespace Data.Repository
 			_context.ChangeTracker.AutoDetectChangesEnabled = true;
 			_context.ChangeTracker.LazyLoadingEnabled = lazyLoading;
 
-			if (hasFlag("<IsDeleted>"))
+			if (HasFlag("<IsDeleted>"))
 			{
 				var parameters = expression.Parameters;
 				var checkNotDeleted = Expression.Equal(Expression.PropertyOrField(parameters[0], "IsDeleted"), Expression.Constant(false));
@@ -165,7 +163,7 @@ namespace Data.Repository
 			_context.ChangeTracker.AutoDetectChangesEnabled = true;
 			_context.ChangeTracker.LazyLoadingEnabled = lazyLoading;
 
-			if (hasFlag("<IsDeleted>"))
+			if (HasFlag("<IsDeleted>"))
 			{
 				var parameters = expression.Parameters;
 				var checkNotDeleted = Expression.Equal(Expression.PropertyOrField(parameters[0], "IsDeleted"), Expression.Constant(false));
@@ -185,7 +183,7 @@ namespace Data.Repository
 		{
 			_context.ChangeTracker.LazyLoadingEnabled = true;
 
-			if (hasFlag("<IsDeleted>"))
+			if (HasFlag("<IsDeleted>"))
 			{
 				var parameters = expression.Parameters;
 				var checkNotDeleted = Expression.Equal(Expression.PropertyOrField(parameters[0], "IsDeleted"), Expression.Constant(false));
@@ -205,7 +203,7 @@ namespace Data.Repository
 		{
 			_context.ChangeTracker.LazyLoadingEnabled = false;
 
-			if (hasFlag("<IsDeleted>"))
+			if (HasFlag("<IsDeleted>"))
 			{
 				var argument = Expression.Parameter(typeof(T));
 				var left = Expression.Property(argument, "IsDeleted");
@@ -224,7 +222,7 @@ namespace Data.Repository
 		{
 			_context.ChangeTracker.LazyLoadingEnabled = false;
 
-			if (hasFlag("<IsDeleted>"))
+			if (HasFlag("<IsDeleted>"))
 			{
 				var parameters = expression.Parameters;
 				var checkNotDeleted = Expression.Equal(Expression.PropertyOrField(parameters[0], "IsDeleted"), Expression.Constant(false));
@@ -253,7 +251,7 @@ namespace Data.Repository
 			_context.ChangeTracker.AutoDetectChangesEnabled = false;
 			_context.ChangeTracker.LazyLoadingEnabled = false;
 
-			if (hasFlag("<IsDeleted>"))
+			if (HasFlag("<IsDeleted>"))
 			{
 				var parameters = expression.Parameters;
 				var checkNotDeleted = Expression.Equal(Expression.PropertyOrField(parameters[0], "IsDeleted"), Expression.Constant(false));
@@ -326,13 +324,11 @@ namespace Data.Repository
 			return DbContext.Database.ExecuteSqlCommand("EXEC " + query, parameters);
 		}
 
-		public bool hasFlag(string field)
+		public bool HasFlag(string field)
 		{
 			var hasFlag = false;
-
 			var genericTypeArguments = _dbSet.GetType().GenericTypeArguments;
-			//entity.GetType().GetProperty("IsDeleted")
-
+			
 			if (genericTypeArguments.Any())
 			{
 				var fields = ((System.Reflection.TypeInfo)(_dbSet.GetType().GenericTypeArguments.FirstOrDefault())).DeclaredFields;
@@ -343,7 +339,7 @@ namespace Data.Repository
 			return hasFlag;
 		}
 
-		public DataTable ConvertToDataTable<T>(IList<T> data)
+		public DataTable ConvertToDataTable(IList<T> data)
 		{
 			var properties = TypeDescriptor.GetProperties(typeof(T));
 			var table = new DataTable();

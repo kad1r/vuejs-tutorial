@@ -1,7 +1,7 @@
 ﻿namespace Data.Query
 {
-	public interface IQueryDispatcher<TResult> where TResult : IQuery
+	public interface IQueryDispatcher
 	{
-		TResult Execute<TQuery>(TQuery query) where TQuery : IQuery;
+		TResult Query<TQuery, TResult>(TQuery query) where TQuery : IQuery;
 	}
 }

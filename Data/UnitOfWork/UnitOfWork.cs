@@ -1,5 +1,5 @@
 ﻿using Data.Repository;
-using Model.ViewModels;
+using Model.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -7,62 +7,18 @@ namespace Data.UnitOfWork
 {
 	public class UnitOfWork : IUnitOfWork
 	{
-		protected string connectionString;
-		private Model.Models.AppDbContext _context;
-		private UnitOfWork uow;
 		private bool disposed = false;
+		private readonly AppDbContext _context;
 
-		protected virtual void Dispose(bool disposing)
+		public UnitOfWork(AppDbContext context)
 		{
-			if (!disposed)
-			{
-				if (disposing)
-				{
-					_context.Dispose();
-				}
-			}
-
-			disposed = true;
-		}
-
-		public void Dispose()
-		{
-			Dispose(true);
-			GC.SuppressFinalize(this);
-		}
-
-		public UnitOfWork(Model.Models.AppDbContext context)
-		{
-			if (context == null)
-			{
-				context = new Model.Models.AppDbContext();
-				context = _context;
-				uow = new UnitOfWork(_context);
-			}
-
-			_context = context;
-		}
-
-		public Model.Models.AppDbContext DbContext
-		{
-			get
-			{
-				if (_context == null)
-				{
-					_context = new Model.Models.AppDbContext();
-				}
-
-				return _context;
-			}
+			_context = context ?? throw new ArgumentNullException("DbContext is null on uow!");
+			LazyLoading(false);
+			ChangeTracking(false);
 		}
 
 		public IRepository<T> Repository<T>() where T : class
 		{
-			if (uow == null)
-			{
-				uow = new UnitOfWork(_context);
-			}
-
 			return new Repository<T>(_context);
 		}
 
@@ -91,7 +47,7 @@ namespace Data.UnitOfWork
 			catch (Exception ex)
 			{
 				// catch DbEntityValidationException errors
-				var msg = ex.Message;
+				_ = ex.Message;
 				throw;
 			}
 		}
@@ -104,20 +60,39 @@ namespace Data.UnitOfWork
 			}
 			catch (Exception ex)
 			{
-				var msg = ex.Message;
+				_ = ex.Message;
 				throw;
 			}
 		}
 
 		public void ChangeTracking(bool option)
 		{
-			DbContext.ChangeTracker.AutoDetectChangesEnabled = option;
+			_context.ChangeTracker.AutoDetectChangesEnabled = option;
 		}
 
 		public void LazyLoading(bool status)
 		{
-			DbContext.ChangeTracker.AutoDetectChangesEnabled = status;
-			DbContext.ChangeTracker.LazyLoadingEnabled = status;
+			_context.ChangeTracker.AutoDetectChangesEnabled = status;
+			_context.ChangeTracker.LazyLoadingEnabled = status;
+		}
+
+		protected virtual void Dispose(bool disposing)
+		{
+			if (!disposed)
+			{
+				if (disposing)
+				{
+					_context.Dispose();
+				}
+			}
+
+			disposed = true;
+		}
+
+		public void Dispose()
+		{
+			Dispose(true);
+			GC.SuppressFinalize(this);
 		}
 	}
 }
