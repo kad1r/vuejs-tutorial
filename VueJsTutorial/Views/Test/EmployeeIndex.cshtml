@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Add Employee";
+}
+<h3>@ViewData["Title"]</h3>
+<h3>@ViewData["Message"]</h3>
+
+<div id="view">
+    <form>
+        <div class="form-group">
+            <label for="LastName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" v-model="firstName" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label for="FirstName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" v-model="lastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" rows="3" id="address" name="address" v-model="address" placeholder="Address"></textarea>
+        </div>
+        <button v-on:click="addEmployee">Add Employee</button>
+    </form>
+</div>
+
+<script src="~/js/Views/Test/EmployeeIndex.bundle.js"></script>
