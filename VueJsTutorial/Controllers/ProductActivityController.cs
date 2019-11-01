@@ -1,5 +1,4 @@
 ﻿using Data.Repository;
-using Data.Services;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -20,22 +19,15 @@ namespace VueJsTutorial.Controllers
 	public class ProductActivityController : BaseController
 	{
 		private readonly IUnitOfWork _uow;
-		private readonly ProductService _productService;
-		public readonly Repository<Product> productRepository;
-		public readonly IConfiguration configuration;
-		public readonly IHostingEnvironment env;
-
-		public ProductActivityController(IUnitOfWork uow,/* ProductService productService, */IHostingEnvironment environment) : base(environment)
+		public readonly IRepository<Product> productRepository;
+		
+		public ProductActivityController(IUnitOfWork uow, IHostingEnvironment environment) : base(environment)
 		{
 			_uow = uow;
-			//_productService = productService;
-			//env = environment;
 		}
 
 		public async Task<IActionResult> Index(int page = 1, IList<SearchObj> searchParams = null, IList<SortObj> sortParams = null)
 		{
-			await _productService.DeleteAllProducts();
-
 			return View();
 		}
 

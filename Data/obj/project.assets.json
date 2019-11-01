@@ -1126,6 +1126,16 @@
         "runtime": {
           "bin/placeholder/Model.dll": {}
         }
+      },
+      "RazorTable/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/RazorTable.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorTable.dll": {}
+        }
       }
     }
   },
@@ -3974,6 +3984,11 @@
       "type": "project",
       "path": "../Model/Model.csproj",
       "msbuildProject": "../Model/Model.csproj"
+    },
+    "RazorTable/1.0.0": {
+      "type": "project",
+      "path": "../RazorTable/RazorTable.csproj",
+      "msbuildProject": "../RazorTable/RazorTable.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3983,6 +3998,7 @@
       "Microsoft.EntityFrameworkCore.DynamicLinq >= 1.0.18",
       "Microsoft.NETCore.App >= 2.2.0",
       "Model >= 1.0.0",
+      "RazorTable >= 1.0.0",
       "System.Linq.Dynamic.Core >= 1.0.19"
     ]
   },
@@ -4018,6 +4034,9 @@
           "projectReferences": {
             "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
               "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj"
+            },
+            "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
+              "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj"
             }
           }
         }

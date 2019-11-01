@@ -106,6 +106,9 @@
             "projectReferences": {
               "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
                 "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj"
+              },
+              "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj"
               }
             }
           }
@@ -222,6 +225,64 @@
             "System.Linq.Dynamic.Core": {
               "target": "Package",
               "version": "[1.0.19, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj",
+        "projectName": "RazorTable",
+        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj",
+        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
             }
           },
           "imports": [

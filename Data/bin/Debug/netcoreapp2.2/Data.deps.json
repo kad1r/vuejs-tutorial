@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.AutoHistory": "2.1.0",
           "Microsoft.EntityFrameworkCore.DynamicLinq": "1.0.18",
           "Model": "1.0.0",
+          "RazorTable": "1.0.0",
           "System.Linq.Dynamic.Core": "1.0.19"
         },
         "runtime": {
@@ -669,6 +670,11 @@
           "Model.dll": {}
         }
       },
+      "RazorTable/1.0.0": {
+        "runtime": {
+          "RazorTable.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Mvc.ViewFeatures.Reference/2.2.0.0": {
         "runtime": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
@@ -1206,6 +1212,11 @@
       "sha512": ""
     },
     "Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RazorTable/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

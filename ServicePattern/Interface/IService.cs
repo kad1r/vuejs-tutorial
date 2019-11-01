@@ -10,11 +10,11 @@ namespace ServicePattern.Interface
 	{
 		void Add(T entity);
 
-		void AddRange(IEnumerable<T> entities);
+		void AddRange(IQueryable<T> entities);
 
 		void Delete(int id);
 
-		void DeleteRange(IEnumerable<T> entities);
+		void DeleteRange(IQueryable<T> entities);
 
 		T FindById(int id);
 

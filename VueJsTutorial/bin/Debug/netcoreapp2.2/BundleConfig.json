@@ -47,7 +47,6 @@
 			"wwwroot/js/prototypes.js",
 			"wwwroot/js/helpers.js",
 			"wwwroot/js/ajaxhelper.js",
-			"wwwroot/js/localstorage.js",
 			"wwwroot/js/toolbar.js",
 			"wwwroot/js/site.js",
 			"wwwroot/js/events.js",

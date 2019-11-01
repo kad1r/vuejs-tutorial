@@ -19,13 +19,13 @@ namespace ServicePattern.Service
 			_repository = repository;
 		}
 
-		public void Add(T entity) => _repository.Add(entity);
+		public virtual void Add(T entity) => _repository.Add(entity);
 
-		public void AddRange(IEnumerable<T> entities) => _repository.AddRange(entities);
+		public void AddRange(IQueryable<T> entities) => _repository.AddRange(entities);
 
 		public void Delete(int id) => _repository.Delete(id);
 
-		public void DeleteRange(IEnumerable<T> entities) => _repository.DeleteRange(entities);
+		public void DeleteRange(IQueryable<T> entities) => _repository.DeleteRange(entities);
 		
 		public T FindById(int id) => _repository.FindById(id);
 

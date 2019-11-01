@@ -1,10 +1,14 @@
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Common.deps.json
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Common.dll
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Common.pdb
+D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.dll
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Razor.dll
+D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.xml
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
 D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Razor.xml
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.csprojAssemblyReference.cache
@@ -13,7 +17,3 @@ D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.Ass
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.csproj.CopyComplete
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.dll
 D:\Development\Tutorials\VueJsTutorial\Common\obj\Debug\netcoreapp2.2\Common.pdb
-D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.dll
-D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.Abstractions.xml
-D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
-D:\Development\Tutorials\VueJsTutorial\Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml

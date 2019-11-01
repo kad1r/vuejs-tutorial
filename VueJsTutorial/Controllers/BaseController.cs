@@ -7,6 +7,7 @@ namespace VueJsTutorial.Controllers
 {
 	public class BaseController : Controller
 	{
+		public readonly int pageSize = 15;
 		public string localhost = string.Empty;
 		public IHostingEnvironment env;
 		public AppSettings AppSettings;

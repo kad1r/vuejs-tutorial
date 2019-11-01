@@ -1,7 +1,6 @@
 ﻿using Common.Filters;
-using Data.Services;
+using Data.Repository;
 using Data.UnitOfWork;
-using Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -10,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Logging;
 using Model.Models;
+using ServicePattern.Service;
 using System.IO;
 
 namespace VueJsTutorial
@@ -39,7 +38,9 @@ namespace VueJsTutorial
 
 			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
-			//services.AddScoped<ProductService>();
+			//services.AddScoped<IMenuService, MenuService>();
+			services.AddScoped<IRepository<Menu>, Repository<Menu>>();
+			services.AddScoped<MenuService>();
 			services.AddTransient<Statistics>();
 			services.AddMvc(options =>
 			{
@@ -57,7 +58,6 @@ namespace VueJsTutorial
 			else
 			{
 				app.UseExceptionHandler("/Home/Error");
-				// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 				app.UseHsts();
 			}
 

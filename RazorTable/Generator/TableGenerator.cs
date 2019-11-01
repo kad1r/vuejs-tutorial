@@ -43,10 +43,6 @@ namespace RazorTable.Generator
 			return string.Empty;
 		}
 
-
-
-
-
 		public static string GenerateInputClass(SearchObj header)
 		{
 			var className = "form-control search-frm " + (!header.IsEnable ? "input-disabled" : "");

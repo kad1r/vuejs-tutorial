@@ -14,6 +14,8 @@
 	</environment>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet"/>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" rel="stylesheet"/>
+	@*<i class="la la-battery-three-quarters"></i>*@
 	<link href="~/release/site.min.css" rel="stylesheet"/>
 </head>
 <body>
@@ -24,7 +26,7 @@
 		</div>
 	</div>
 	<div id="vue-app" class="col">
-		<partial name="_CookieConsentPartial" />
+		<partial name="_CookieConsentPartial"/>
 		<main role="main" class="pb-3">
 			@RenderBody()
 		</main>
@@ -56,6 +58,7 @@
 	<script src="~/release/vue-bundle.js" asp-append-version="true"></script>
 	<script src="~/js/vuehelpers.js" asp-append-version="true"></script>
 	<script src="~/js/toolbar.js" asp-append-version="true"></script>
+	<script src="~/js/localStorage.js" asp-append-version="true"></script>
 	@RenderSection("Scripts", required: false)
 	<script src="~/release/site.js" asp-append-version="true"></script>
 </body>

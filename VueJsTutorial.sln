@@ -29,7 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{85D0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{D71A56D8-7082-4C1F-8DAF-B4116FD9A2D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePattern", "ServicePattern\ServicePattern.csproj", "{89E77504-678A-424A-941B-17ADC17E38CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicePattern", "ServicePattern\ServicePattern.csproj", "{89E77504-678A-424A-941B-17ADC17E38CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumUtilities", "EnumUtilities\EnumUtilities.csproj", "{655B07C0-8A39-4A64-9D4F-885BA686640D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{89E77504-678A-424A-941B-17ADC17E38CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89E77504-678A-424A-941B-17ADC17E38CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89E77504-678A-424A-941B-17ADC17E38CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655B07C0-8A39-4A64-9D4F-885BA686640D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655B07C0-8A39-4A64-9D4F-885BA686640D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655B07C0-8A39-4A64-9D4F-885BA686640D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655B07C0-8A39-4A64-9D4F-885BA686640D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{F3836D6F-CCC1-4383-A334-ABF9C74AA1E0} = {0CAE5FB2-8E0E-410D-B950-9489955593A6}
 		{D71A56D8-7082-4C1F-8DAF-B4116FD9A2D1} = {6E4F0DBC-53F3-4616-A7E3-D97C25AA09A7}
 		{89E77504-678A-424A-941B-17ADC17E38CF} = {0CAE5FB2-8E0E-410D-B950-9489955593A6}
+		{655B07C0-8A39-4A64-9D4F-885BA686640D} = {636DE929-2762-497D-A0A4-790C82445F66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E7CC85E-093C-468C-B1F8-C4406691D4F3}

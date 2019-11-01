@@ -8,7 +8,7 @@ namespace Data.UnitOfWork
 	public class UnitOfWork : IUnitOfWork
 	{
 		private bool disposed = false;
-		private readonly AppDbContext _context;
+		protected readonly AppDbContext _context;
 
 		public UnitOfWork(AppDbContext context)
 		{

@@ -106,6 +106,9 @@
             "projectReferences": {
               "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
                 "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj"
+              },
+              "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj"
               }
             }
           }
@@ -378,6 +381,85 @@
         }
       }
     },
+    "D:\\Development\\Tutorials\\VueJsTutorial\\ServicePattern\\ServicePattern.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\ServicePattern\\ServicePattern.csproj",
+        "projectName": "ServicePattern",
+        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\ServicePattern\\ServicePattern.csproj",
+        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\ServicePattern\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj"
+              },
+              "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj"
+              },
+              "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj"
+              },
+              "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.0.19, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Development\\Tutorials\\VueJsTutorial\\VueJsTutorial\\VueJsTutorial.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -418,6 +500,9 @@
               },
               "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
                 "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj"
+              },
+              "D:\\Development\\Tutorials\\VueJsTutorial\\ServicePattern\\ServicePattern.csproj": {
+                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\ServicePattern\\ServicePattern.csproj"
               }
             }
           }
@@ -461,6 +546,10 @@
               "autoReferenced": true
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Utils": {
               "target": "Package",
               "version": "[3.0.0, )"
             },

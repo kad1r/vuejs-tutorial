@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Model.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,27 +12,27 @@ namespace Data.Repository
 {
 	public class Repository<T> : IRepository<T> where T : class
 	{
-		private readonly DbContext _context;
+		protected AppDbContext DbContext;
+		protected readonly DbContext _context;
 		private readonly DbSet<T> _dbSet;
-		protected Model.Models.AppDbContext DbContext;
 
-		public Repository(Model.Models.AppDbContext context)
+		public Repository(AppDbContext context)
 		{
 			if (context == null)
 			{
-				context = new Model.Models.AppDbContext();
+				context = new AppDbContext();
 			}
 
 			_context = context;
 			_dbSet = _context.Set<T>();
 		}
 
-		public void Add(T entity)
+		public virtual void Add(T entity)
 		{
 			_dbSet.Add(entity);
 		}
 
-		public void AddRange(IEnumerable<T> list)
+		public void AddRange(IQueryable<T> list)
 		{
 			_dbSet.AddRange(list);
 		}
@@ -85,7 +86,7 @@ namespace Data.Repository
 			}
 		}
 
-		public void DeleteRange(IEnumerable<T> list)
+		public void DeleteRange(IQueryable<T> list)
 		{
 			_dbSet.RemoveRange(list);
 		}
@@ -267,25 +268,6 @@ namespace Data.Repository
 			}
 		}
 
-		public IQueryable<T> Include(Expression<Func<T, object>> expression)
-		{
-			_context.ChangeTracker.LazyLoadingEnabled = false;
-
-			return _dbSet.Include(expression);
-		}
-
-		public IQueryable<T> Include(params Expression<Func<T, object>>[] includes)
-		{
-			_context.ChangeTracker.LazyLoadingEnabled = false;
-
-			foreach (var include in includes)
-			{
-				_dbSet.Include(include);
-			}
-
-			return _dbSet;
-		}
-
 		public virtual void LazyLoading(bool lazyLoadingEnabled, bool proxyCreationEnabled, bool autoDetectChanges)
 		{
 			_context.ChangeTracker.LazyLoadingEnabled = lazyLoadingEnabled;
@@ -319,16 +301,13 @@ namespace Data.Repository
 			return ConvertToDataTable(list);
 		}
 
-		public int ExecQuery(string query, params object[] parameters)
-		{
-			return DbContext.Database.ExecuteSqlCommand("EXEC " + query, parameters);
-		}
+		public int ExecQuery(string query, params object[] parameters) => DbContext.Database.ExecuteSqlCommand("EXEC " + query, parameters);
 
 		public bool HasFlag(string field)
 		{
 			var hasFlag = false;
 			var genericTypeArguments = _dbSet.GetType().GenericTypeArguments;
-			
+
 			if (genericTypeArguments.Any())
 			{
 				var fields = ((System.Reflection.TypeInfo)(_dbSet.GetType().GenericTypeArguments.FirstOrDefault())).DeclaredFields;

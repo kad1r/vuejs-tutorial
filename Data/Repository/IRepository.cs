@@ -12,7 +12,7 @@ namespace Data.Repository
 	{
 		void Add(T entity);
 
-		void AddRange(IEnumerable<T> list);
+		void AddRange(IQueryable<T> list);
 
 		void Update(T entity);
 
@@ -22,7 +22,7 @@ namespace Data.Repository
 
 		void Delete(int id);
 
-		void DeleteRange(IEnumerable<T> list);
+		void DeleteRange(IQueryable<T> list);
 
 		void Attach(T Entity);
 
@@ -51,10 +51,6 @@ namespace Data.Repository
 		IQueryable<T> QueryNoTracking();
 
 		IQueryable<T> QueryNoTracking(Expression<Func<T, bool>> expression);
-
-		IQueryable<T> Include(Expression<Func<T, object>> expression);
-
-		IQueryable<T> Include(params Expression<Func<T, object>>[] includes);
 
 		IList<T> SqlQuery(string query);
 
