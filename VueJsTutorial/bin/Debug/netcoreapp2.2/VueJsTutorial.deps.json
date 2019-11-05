@@ -47,6 +47,17 @@
           "VueJsTutorial.dll": {}
         }
       },
+      "EnumAgent/1.0.2": {
+        "runtime": {
+          "lib/netcoreapp2.2/EnumAgent.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.2/EnumAgent.dll": {}
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/2.9.3": {},
       "Microsoft.CodeAnalysis.Common/3.3.0": {
         "dependencies": {
@@ -1298,6 +1309,9 @@
         }
       },
       "RazorTable/1.0.0": {
+        "dependencies": {
+          "EnumAgent": "1.0.2"
+        },
         "runtime": {
           "RazorTable.dll": {}
         },
@@ -4213,6 +4227,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "EnumAgent/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BH/erzGPOqb1Exuc/Lgna2qFWi4BCBIhRxGV8O2vZjRpntpYqpNSH/zjHy3tRgPRKFet8EUvOlIK/+mDldS2OQ==",
+      "path": "enumagent/1.0.2",
+      "hashPath": "enumagent.1.0.2.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/2.9.3": {
       "type": "package",

@@ -70,8 +70,7 @@ Vue.component("otable", {
 				fetch(localUrl + "/data/tablecomponent.json")
 					.then(res => res.json())
 					.then(function (response) {
-						debugger
-						for (searchValue of searchValues) {
+						for (var searchValue of searchValues) {
 							response.model = response.model.filter(x => {
 								switch (searchValue.filterRule) {
 									case "Begins with": {

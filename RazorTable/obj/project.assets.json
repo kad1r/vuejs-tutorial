@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "EnumAgent/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.2/EnumAgent.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/EnumAgent.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -211,6 +220,18 @@
     }
   },
   "libraries": {
+    "EnumAgent/1.0.2": {
+      "sha512": "BH/erzGPOqb1Exuc/Lgna2qFWi4BCBIhRxGV8O2vZjRpntpYqpNSH/zjHy3tRgPRKFet8EUvOlIK/+mDldS2OQ==",
+      "type": "package",
+      "path": "enumagent/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "enumagent.1.0.2.nupkg.sha512",
+        "enumagent.nuspec",
+        "lib/netcoreapp2.2/EnumAgent.dll"
+      ]
+    },
     "Microsoft.NETCore.App/2.2.0": {
       "sha512": "QU8taCyeyePwatrj+h+750lMnsPCq3YPaGmsdtSHXPCjDyjto2KT7QDNVet0oRliX4PjaINpyg0Yzd9DnQ/Wkw==",
       "type": "package",
@@ -683,6 +704,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "EnumAgent >= 1.0.2",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
@@ -727,6 +749,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "EnumAgent": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",

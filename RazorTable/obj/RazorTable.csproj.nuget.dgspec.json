@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "EnumAgent": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

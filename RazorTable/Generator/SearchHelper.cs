@@ -119,6 +119,7 @@ namespace RazorTable.Generator
 						// TODO
 						// Create nuget package for enum utilities and get it from there, we need to decouple project dependencies
 						//EnumHelper.GetValueOf(parameter.ColumnType, parameter.Value);
+						EnumAgent.Utilities.ConvertFromString(parameter.ColumnType,parameter.Value);
 						break;
 					}
 				default:

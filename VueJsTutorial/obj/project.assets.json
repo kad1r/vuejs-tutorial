@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "EnumAgent/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.2/EnumAgent.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/EnumAgent.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -5279,6 +5288,9 @@
       "RazorTable/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "EnumAgent": "1.0.2"
+        },
         "compile": {
           "bin/placeholder/RazorTable.dll": {}
         },
@@ -5307,6 +5319,18 @@
     }
   },
   "libraries": {
+    "EnumAgent/1.0.2": {
+      "sha512": "BH/erzGPOqb1Exuc/Lgna2qFWi4BCBIhRxGV8O2vZjRpntpYqpNSH/zjHy3tRgPRKFet8EUvOlIK/+mDldS2OQ==",
+      "type": "package",
+      "path": "enumagent/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "enumagent.1.0.2.nupkg.sha512",
+        "enumagent.nuspec",
+        "lib/netcoreapp2.2/EnumAgent.dll"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
