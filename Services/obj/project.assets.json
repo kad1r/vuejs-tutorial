@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Kavci\\.nuget\\packages\\": {},
+    "C:\\Users\\saksar\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Services\\obj\\",
+      "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

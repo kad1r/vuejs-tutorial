@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const glob = require('glob');
 
 function getEntries() {
-    return glob.sync('./Views/**/**.vue')
+    return glob.sync('./Views/**/**.js')
         .map((file) => {
             var splitedFilePath = file.split("/");
             var fileFolder = splitedFilePath[splitedFilePath.length - 3];
@@ -21,13 +21,6 @@ function getEntries() {
             return memo;
         }, {})
 }
-
-
-function getOutput(t) {
-    console.log(t);
-    return "test.js";
-}
-
 
 module.exports = {
     
@@ -54,7 +47,6 @@ module.exports = {
             var filePath = arg.chunk.entryModule.rawRequest;
             var fileName = arg.chunk.name.split("__")[1];
             var fileFolder = path.parse(filePath).dir.replace("/Js", "");
-            console.log(fileFolder);
             return fileFolder + '/' + fileName + '.bundle.js';
         }
     },

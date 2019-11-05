@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let view = new Vue({
         el: document.getElementById('view'),
         mounted: function () {
-            alert("OK");
         },
         data: {
             chartOptions: {

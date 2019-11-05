@@ -6,3 +6,11 @@ D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services
 D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfo.cs
 D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.dll
 D:\Development\Tutorials\VueJsTutorial\Services\obj\Debug\netcoreapp3.0\Services.pdb
+C:\Projects\GitHub\vuejs-tutorial\Services\bin\Debug\netcoreapp3.0\Services.deps.json
+C:\Projects\GitHub\vuejs-tutorial\Services\bin\Debug\netcoreapp3.0\Services.dll
+C:\Projects\GitHub\vuejs-tutorial\Services\bin\Debug\netcoreapp3.0\Services.pdb
+C:\Projects\GitHub\vuejs-tutorial\Services\obj\Debug\netcoreapp3.0\Services.csprojAssemblyReference.cache
+C:\Projects\GitHub\vuejs-tutorial\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfoInputs.cache
+C:\Projects\GitHub\vuejs-tutorial\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfo.cs
+C:\Projects\GitHub\vuejs-tutorial\Services\obj\Debug\netcoreapp3.0\Services.dll
+C:\Projects\GitHub\vuejs-tutorial\Services\obj\Debug\netcoreapp3.0\Services.pdb

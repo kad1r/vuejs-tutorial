@@ -6,3 +6,10 @@ D:\Development\Tutorials\VueJsTutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorT
 D:\Development\Tutorials\VueJsTutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.AssemblyInfo.cs
 D:\Development\Tutorials\VueJsTutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.dll
 D:\Development\Tutorials\VueJsTutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.pdb
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\bin\Debug\netcoreapp2.2\RazorTable.deps.json
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\bin\Debug\netcoreapp2.2\RazorTable.dll
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\bin\Debug\netcoreapp2.2\RazorTable.pdb
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.AssemblyInfoInputs.cache
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.AssemblyInfo.cs
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.dll
+C:\Projects\GitHub\vuejs-tutorial\RazorTable\obj\Debug\netcoreapp2.2\RazorTable.pdb

@@ -6,3 +6,11 @@ D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.Assembl
 D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfo.cs
 D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.dll
 D:\Development\Tutorials\VueJsTutorial\Test\obj\Debug\netcoreapp2.2\Test.pdb
+C:\Projects\GitHub\vuejs-tutorial\Test\bin\Debug\netcoreapp2.2\Test.deps.json
+C:\Projects\GitHub\vuejs-tutorial\Test\bin\Debug\netcoreapp2.2\Test.dll
+C:\Projects\GitHub\vuejs-tutorial\Test\bin\Debug\netcoreapp2.2\Test.pdb
+C:\Projects\GitHub\vuejs-tutorial\Test\obj\Debug\netcoreapp2.2\Test.csprojAssemblyReference.cache
+C:\Projects\GitHub\vuejs-tutorial\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfoInputs.cache
+C:\Projects\GitHub\vuejs-tutorial\Test\obj\Debug\netcoreapp2.2\Test.AssemblyInfo.cs
+C:\Projects\GitHub\vuejs-tutorial\Test\obj\Debug\netcoreapp2.2\Test.dll
+C:\Projects\GitHub\vuejs-tutorial\Test\obj\Debug\netcoreapp2.2\Test.pdb

@@ -6,3 +6,11 @@ D:\Development\Tutorials\VueJsTutorial\Logging\obj\Debug\netcoreapp2.2\Logging.c
 D:\Development\Tutorials\VueJsTutorial\Logging\bin\Debug\netcoreapp2.2\Logging.pdb
 D:\Development\Tutorials\VueJsTutorial\Logging\obj\Debug\netcoreapp2.2\Logging.dll
 D:\Development\Tutorials\VueJsTutorial\Logging\obj\Debug\netcoreapp2.2\Logging.pdb
+C:\Projects\GitHub\vuejs-tutorial\Logging\bin\Debug\netcoreapp2.2\Logging.deps.json
+C:\Projects\GitHub\vuejs-tutorial\Logging\bin\Debug\netcoreapp2.2\Logging.dll
+C:\Projects\GitHub\vuejs-tutorial\Logging\bin\Debug\netcoreapp2.2\Logging.pdb
+C:\Projects\GitHub\vuejs-tutorial\Logging\obj\Debug\netcoreapp2.2\Logging.AssemblyInfoInputs.cache
+C:\Projects\GitHub\vuejs-tutorial\Logging\obj\Debug\netcoreapp2.2\Logging.AssemblyInfo.cs
+C:\Projects\GitHub\vuejs-tutorial\Logging\obj\Debug\netcoreapp2.2\Logging.dll
+C:\Projects\GitHub\vuejs-tutorial\Logging\obj\Debug\netcoreapp2.2\Logging.pdb
+C:\Projects\GitHub\vuejs-tutorial\Logging\obj\Debug\netcoreapp2.2\Logging.csprojAssemblyReference.cache

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Tutorials\\VueJsTutorial\\VueJsTutorial\\VueJsTutorial.csproj": {}
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\VueJsTutorial\\VueJsTutorial.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,20 +78,20 @@
         }
       }
     },
-    "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +104,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj"
               }
             }
           }
@@ -156,20 +156,20 @@
         }
       }
     },
-    "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\Logging\\Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\Logging\\Logging.csproj",
         "projectName": "Logging",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Logging\\Logging.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -238,20 +238,20 @@
         }
       }
     },
-    "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -264,8 +264,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj"
               }
             }
           }
@@ -320,20 +320,20 @@
         }
       }
     },
-    "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj",
         "projectName": "RazorTable",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -378,20 +378,20 @@
         }
       }
     },
-    "D:\\Development\\Tutorials\\VueJsTutorial\\VueJsTutorial\\VueJsTutorial.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\VueJsTutorial\\VueJsTutorial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\VueJsTutorial\\VueJsTutorial.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\VueJsTutorial\\VueJsTutorial.csproj",
         "projectName": "VueJsTutorial",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\VueJsTutorial\\VueJsTutorial.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\VueJsTutorial\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\VueJsTutorial\\VueJsTutorial.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\VueJsTutorial\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -404,20 +404,20 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Common\\Common.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Common\\Common.csproj"
               },
-              "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Data\\Data.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\Data\\Data.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Data\\Data.csproj"
               },
-              "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Logging\\Logging.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\Logging\\Logging.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Logging\\Logging.csproj"
               },
-              "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Model\\Model.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Model\\Model.csproj"
               },
-              "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
-                "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj"
+              "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj": {
+                "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj"
               }
             }
           }

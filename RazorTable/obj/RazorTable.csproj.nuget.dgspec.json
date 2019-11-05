@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {}
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj",
         "projectName": "RazorTable",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\RazorTable.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\RazorTable\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\RazorTable.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\RazorTable\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

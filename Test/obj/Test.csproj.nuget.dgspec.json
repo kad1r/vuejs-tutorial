@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Tutorials\\VueJsTutorial\\Test\\Test.csproj": {}
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\Test\\Test.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Tutorials\\VueJsTutorial\\Test\\Test.csproj": {
+    "C:\\Projects\\GitHub\\vuejs-tutorial\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Tutorials\\VueJsTutorial\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\vuejs-tutorial\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\Kavci\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Tutorials\\VueJsTutorial\\Test\\obj\\",
+        "projectPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\saksar\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\GitHub\\vuejs-tutorial\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kavci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saksar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
