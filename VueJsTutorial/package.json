@@ -26,6 +26,8 @@
     "webpack": "^3.6.0"
   },
   "dependencies": {
+    "buefy": "^0.8.6",
+    "cts-vue-components": "git+https://github.com/cts-yazilim/cts-vue-components.git",
     "glob": "^7.1.5",
     "highcharts": "^7.2.0",
     "highcharts-vue": "^1.3.5"

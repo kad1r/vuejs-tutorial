@@ -118,3 +118,4 @@ C:\Projects\GitHub\vuejs-tutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTut
 C:\Projects\GitHub\vuejs-tutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTutorial.dll
 C:\Projects\GitHub\vuejs-tutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\VueJsTutorial.pdb
 C:\Projects\GitHub\vuejs-tutorial\VueJsTutorial\bin\Debug\netcoreapp2.2\package-lock.json
+C:\Projects\GitHub\vuejs-tutorial\VueJsTutorial\obj\Debug\netcoreapp2.2\Razor\Views\Test\BuefyComponents.cshtml.g.cs
